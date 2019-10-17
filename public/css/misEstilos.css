@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+html {}
+
+body {
+    height: 100vh;
+    border: 2px solid black;
+}
+
+h1, h2, h3, h4 {}
+
+.cabecera {
+    border: 5px solid #1E90FF !important;
+    background-color: #1E90FF !important;
+    height: 6vh;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.contenedor {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 80% 18.4%;
+    grid-gap: 20px;
+    padding: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 800px 1fr;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.column {
+    grid-column: 2/3;
+}
+
+#lateral {
+    width: 100%;
+    float: right;
+    border: 1px solid #1E90FF;
+    margin-top: 10px;
+    height: 81vh;
+}
+
+#main {
+    margin-right: 200px;
+    height: 80vh;
+    width: 100%;
+}
+
+#piePagina {
+    border: 10px solid #1E90FF;
+    margin-top: 40px;
+    height: 6vh;
+    position: relative;
+    top: 2px;
+    background-color: #1E90FF;
+}
+
+.text {
+    text-align: center;
+    color: white;
+    vertical-align: middle;
+}
+
+.articulo {
+    border: 1px solid #1E90FF;
+    text-align: left;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 40vh;
+}
+
+.btn--iot {
+    border: 1px solid black;
+    padding: 20px 40px;
+    margin-top: 30px;
+}
+
+.listaNavegacion {
+    display: inline;
+}
+
+p.fechaPost {
+    font-size: small;
+    font-style: italic;
+}
+
+p.entradaPost {
+    text-align: justify;
+}
+
+p.infoLateralPost {
+    margin: 15px;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    text-decoration: underline;
+    color: #00FFFF;
+}
+
+article h1 {
+    font-size: 2em;
+    text-align: left;
+}
+
+article h2 {
+    font-size: 1.2em;
+}
+
+figure img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+.enter {
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+}
+
+.items-grid {
+    grid-column: 2/3;
+    display: flex;
+}
+
+.listaDatosSensor {
+    display: inline;
+    margin: 1px;
+}
+
+p.infoLateralPost1 {
+    margin: 15px;
+    margin-bottom: 80px;
+}
+
+.lista {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listaMenu {
+    display: inline;
+    margin-right: 20px;
+    color: white;
+    position: relative;
+    top: 15px;
+}
+
+/* .session {
+    align-self: center;
+} */
+
+.button {
+    width: 200px;
+    padding: 32px 16px;
+    font-size: 50px;
+}
+
+.grafica1 {
+    border: 1px solid #00FFFF;
+}
+
+.articuloCanales {
+    color: white;
+    border: 10px black;
+    background-color: #1E90FF;
+}
+
+article h3 {
+    font-size: 1.25em;
+    text-align: left;
+    margin-top: 25px;
+}
+
+article h4 {
+    font-size: 1.25em;
+    text-align: left;
+    margin-top: 25px;
+
+}article h5 {
+    font-size: 1.25em;
+    text-align: left;
+    margin-top: 25px;
+} 
+
+.articuloDatosCanales {
+    border: 1px solid #1E90FF;
+    text-align: center;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    margin-bottom: 3.5px;
+    margin-top: 1px;
+    height: 23.5vh;
+    float: right;
+}
+
+input, label {
+    text-align: center;
+    margin: 5px;
+    width: auto;
+}
+
+.contenedor--form {
+    display: grid;
+    grid-template-columns: 1fr 360px 1fr;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.contenedor--btn {
+    display: grid;
+    grid-template-columns: 1fr 360px 1fr;
+    margin-bottom: 220px;
+}
+
+.labels {
+    grid-column: 2/3;
+}
+
+.inputs {
+    grid-column: 3/4;
+}
+
+.items--form {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#start {
+    width: 95%;
+}
+
+.btn--log {
+    display: block;
+    width: 200px;
+}
+
+.articulo1 {
+    border: 1px solid #1E90FF;
+    text-align: left;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 65vh;
+}
+
+.articulo2 {
+    border: 1px solid #1E90FF;
+    text-align: left;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 75vh;
+}
+.articuloContacto {
+    border: 1px solid #1E90FF;
+    text-align: left;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 80vh;
+}
+
+#piePaginaLogin {
+    border: 10px solid #1E90FF;
+    margin-top: 40px;
+    height: 6vh;
+    position: relative;
+    top: 140px;
+    background-color: #1E90FF;
+}
