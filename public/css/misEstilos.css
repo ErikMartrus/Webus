@@ -295,3 +295,8 @@ input, label {
     top: 140px;
     background-color: #1E90FF;
 }
+
+.contenedor--adCanal{
+    grid-template-columns: 1fr 360px 1fr;
+    margin-bottom: 220px;
+}
