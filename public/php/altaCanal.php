@@ -8,8 +8,9 @@ $longitud = $_POST["longitud"];
 $latitud = $_POST["latitud"];
 $nombreDelSensor = $_POST["nombreDelSensor"];
 $url= rand() . "\n";
+
 //saber id del usuario
-$insertar = "INSERT INTO canales(nombre,description,longitud,latitud,nombreDelSensor) VALUES ('$idToSave','$dato','$fecha')";
+$insertar = "INSERT INTO canales(nombre,description,longitud,latitud,nombreDelSensor,url) VALUES ('$name','$descripcion','$fecha','$url')";
 
 
 
