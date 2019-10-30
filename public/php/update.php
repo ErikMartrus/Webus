@@ -15,7 +15,7 @@ $resultado=mysqli_query($conexion, $consulta);
 $idToSave=0;
 $filas=mysqli_num_rows($resultado);
 if ($row=mysqli_fetch_assoc($result)) {
-    $idToSave=$row("id");
+    $idToSave= $row("id");
 
 }
 
