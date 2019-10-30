@@ -16,8 +16,9 @@ if (!$conn) {
 }
  
 echo "Connected successfully";
- 
-$sql = "INSERT INTO users (name, email, password,fecha_de_nacimiento,fecha) VALUES ('Thom', 'Vial', 'thom.v@some.com')";
+
+
+$sql = "INSERT INTO users (name, email, password,fecha_de_nacimiento,fecha) VALUES ('Erik', 'erik_mg94@hotmail.es', 'thom.v@some.com')";
 if (mysqli_query($conn, $sql)) {
       echo "New record created successfully";
 } else {
