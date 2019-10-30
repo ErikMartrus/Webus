@@ -2,8 +2,6 @@
 
 function saveInformationToDatabase($url,$dato){
 //cojo los datos del campo usuairo y los almaceno en la variable $usuario
-$dato = $_POST['dato'];
-$url = $_POST['url'];
 $fecha= date("Y-m-d H:i:s");
 //conectar a la base de datos
 //la url es de la tabla canales id canal de tabla sensores
@@ -13,8 +11,7 @@ $consulta = "SELECT * FROM canales WHERE url='$url'";
 $resultado=mysqli_query($conexion, $consulta);
 //si ha conincidido me da un resultado y sino me da cero
 $idToSave=0;
-$filas=mysqli_num_rows($resultado);
-if ($row=mysqli_fetch_assoc($result)) {
+if ($row=mysqli_fetch_assoc($resultado)) {
     $idToSave= $row("id");
 
 }
@@ -24,6 +21,7 @@ $insertar = "INSERT INTO datossensores(idcanal,dato,fecha) VALUES ('$idToSave','
 //liberar los resultados, para que no consuma espacio en memoria
 mysqli_free_result($resultado);
 mysqli_close($conexion);
+}
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(isset($_POST["url"])&& isset($_POST["dato"])){
