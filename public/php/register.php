@@ -5,6 +5,7 @@ $email = $_POST["email"];
 $pass = $_POST["pass"];
 $fecha= date("Y-m-d H:i:s");
 // Create connection
+function saveInformationToDatabase($name,$fechaDeNacimiento,$email,$pass,$fecha){
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 
@@ -30,5 +31,5 @@ if (!$resultado) {
 
 //CERRAR CONEXION
 mysqli_close($conexion);
-    
+saveInformationToDatabase($nombre, $fechaDeNacimiento,$email,$pass,$fecha);
 ?>
