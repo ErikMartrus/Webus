@@ -17,7 +17,7 @@ if (!$conn) {
  
 echo "Connected successfully";
 
-$insertar = "INSERT INTO users(name,fechaDeNacimiento,email, pass,fecha) VALUES ('$nombre', '$fechaDeNacimiento', '$email', '$pass', '$fecha')";
+$insertar = "INSERT INTO users(name,fechaDeNacimiento,email, pass,fecha) VALUES ('$name', '$fechaDeNacimiento', '$email', '$pass', '$fecha')";
 //EJECUTAR CONSULTA:
 //La variable conexion tiene almacenado los datos para acceder a la base de datos (servidor, usuario, contraseña y nombre de la bd).
 
