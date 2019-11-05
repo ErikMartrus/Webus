@@ -30,6 +30,6 @@ if (!$resultado) {
 }
 
 //CERRAR CONEXION
-mysqli_close($conexion);
+mysqli_close($conn);
 saveInformationToDatabase($nombre, $fechaDeNacimiento,$email,$pass,$fecha);
 ?>
