@@ -54,7 +54,7 @@
   <!-- 80% -->
 
 
-  <form method="POST">
+  <form  action="register.php" method="POST">
     <div class="contenedor--form">
       <div class="items--form">
         <label for="name">Nombre: <span class="required">*</span></label>
@@ -62,12 +62,12 @@
       </div>
       <div class="items--form">
         <label for="start">Fecha de Nacimiento:</label>
-        <input type="date" id="fechaDeNacimiento" name="trip-start" value="2019-07-10" min="1990-01-01" max="2019-12-31">
+        <input type="date" id="fechaDeNacimiento" name="fechaDeNacimiento" value="2019-07-10" min="1990-01-01" max="2019-12-31">
       </div>
 
       <div class="items--form">
         <label for="exampleInputEmail1">Correo electrónico</label>
-        <input type="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <input type="email" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
       </div>
 
       <div class="items--form">
