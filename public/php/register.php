@@ -21,7 +21,7 @@ $insertar = "INSERT INTO users(name,fechaDeNacimiento,email, pass,fecha) VALUES 
 //EJECUTAR CONSULTA:
 //La variable conexion tiene almacenado los datos para acceder a la base de datos (servidor, usuario, contraseña y nombre de la bd).
 
-$resultado = mysqli_query($conexion, $insertar);
+$resultado = mysqli_query($conn, $insertar);
 
 if (!$resultado) {
     echo 'Error al registrarse';
