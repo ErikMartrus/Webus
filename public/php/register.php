@@ -20,6 +20,10 @@ echo "Connected successfully";
 $insertar = "INSERT INTO users(name,fechaDeNacimiento,email, pass,fecha) VALUES ('$name', '$fechaDeNacimiento', '$email', '$pass', '$fecha')";
 //Método por si se insertan 2 usuarios con el mismo correo
 $verificar_usuario_doble = mysqli_query(conexion,"SELECT * FROM users WHERE email='$email'";)
+if(mysqli_num_rows($verificar_usuario_doble) >0){
+    echo 'El usuario ya esta registrado anteriormente';
+    exit;
+}
 //EJECUTAR CONSULTA:
 //La variable conexion tiene almacenado los datos para acceder a la base de datos (servidor, usuario, contraseña y nombre de la bd).
 
