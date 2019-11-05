@@ -19,9 +19,15 @@ echo "Connected successfully";
 
 $insertar = "INSERT INTO users(name,fechaDeNacimiento,email, pass,fecha) VALUES ('$name', '$fechaDeNacimiento', '$email', '$pass', '$fecha')";
 //Método por si se insertan 2 usuarios con el mismo correo
-$verificar_usuario_doble = mysqli_query(conexion,"SELECT * FROM users WHERE email='$email'";)
+$verificar_usuario_doble = mysqli_query($conn,"SELECT * FROM users WHERE email='$email'";)
 if(mysqli_num_rows($verificar_usuario_doble) >0){
     echo 'El usuario ya esta registrado anteriormente';
+    exit;
+}
+
+$verificar_nombre_doble = mysqli_query($conn,"SELECT * FROM users WHERE name='$name'";)
+if(mysqli_num_rows($verificar_nombre_doble) >0){
+    echo 'El nombre de usuario no se encuentra disponible';
     exit;
 }
 //EJECUTAR CONSULTA:
