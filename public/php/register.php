@@ -5,7 +5,7 @@ $email = $_POST["email"];
 $pass = $_POST["pass"];
 $fecha= date("Y-m-d H:i:s");
 // Create connection
-function saveInformationToDatabase($name,$fechaDeNacimiento,$email,$pass,$fecha){
+
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 
@@ -18,6 +18,8 @@ if (!$conn) {
 echo "Connected successfully";
 
 $insertar = "INSERT INTO users(name,fechaDeNacimiento,email, pass,fecha) VALUES ('$name', '$fechaDeNacimiento', '$email', '$pass', '$fecha')";
+//Método por si se insertan 2 usuarios con el mismo correo
+$verificar_usuario_doble = mysqli_query(conexion,"SELECT * FROM users WHERE email='$email'";)
 //EJECUTAR CONSULTA:
 //La variable conexion tiene almacenado los datos para acceder a la base de datos (servidor, usuario, contraseña y nombre de la bd).
 
@@ -31,5 +33,5 @@ if (!$resultado) {
 
 //CERRAR CONEXION
 mysqli_close($conn);
-saveInformationToDatabase($nombre, $fechaDeNacimiento,$email,$pass,$fecha);
+
 ?>
