@@ -47,7 +47,10 @@ if (!$resultado) {
     echo 'Error al registrarse';
     echo mysqli_error($conn);
 } else {
-    echo 'Usuario registrado exitosamente';
+    echo '<script>
+    alert("El usuario ha sido registrado exitosamente")
+    </script>';
+    exit;
 }
 
 //CERRAR CONEXION
