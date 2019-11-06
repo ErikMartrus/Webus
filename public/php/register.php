@@ -5,9 +5,12 @@ $email = $_POST["email"];
 $pass = $_POST["pass"];
 $fecha= date("Y-m-d H:i:s");
 // Create connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$bdname = "laboratorio";
 
-
-$conn = mysqli_connect("localhost", "root", "root", "laboratorio");
+$conn = mysqli_connect($servername, $username, $password, $bdname);
 // Check connection
 
 if (!$conn) {
