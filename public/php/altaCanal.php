@@ -23,7 +23,7 @@ $nombreDelSensor = $_POST["nombreDelSensor"];
 $url= rand() . "\n"; //n significa new line(salto de línea) y el punto =+
 
 //saber id del usuario
-$insertar = "INSERT INTO canales(nombre,descripcion,longitud,latitud,nombreDelSensor,url) VALUES ('$name','$descripcion','$longitud','$latitud','$nombreDelSensor','$url')";
+$insertar = "INSERT INTO canales(nombreCanal,descripcion,longitud,latitud,nombreSensor,url) VALUES ('$name','$descripcion','$longitud','$latitud','$nombreDelSensor','$url')";
 
 
 //EJECUTAR CONSULTA:
