@@ -7,8 +7,7 @@ $fecha= date("Y-m-d H:i:s");
 // Create connection
 
 
-$conn = mysqli_connect($servername, $username, $password, $database);
-
+$conn = mysqli_connect("localhost", "root", "root", "laboratorio");
 // Check connection
 
 if (!$conn) {
