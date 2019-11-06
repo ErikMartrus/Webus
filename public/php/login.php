@@ -14,6 +14,10 @@ if (!$conn) {
  
 echo "Connected successfully";
 
+//Recibimos los datos del formulario login.html y los almacenamos en variables.
+$email= $_POST["email"];
+$pass = $_POST["pass"];
+
 //Arrancamos la sesion del usuario
 session_start();
 //Seleccionamos de la tabla users el campo nombre
