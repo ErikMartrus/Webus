@@ -23,27 +23,9 @@ $nombreDelSensor = $_POST["nombreDelSensor"];
 $url= rand() . "\n"; //n significa new line(salto de línea) y el punto =+
 
 //saber id del usuario
-$insertar = "INSERT INTO canales(nombre,description,longitud,latitud,nombreDelSensor,url) VALUES ('$name','$descripcion','$fecha','$url')";
+$insertar = "INSERT INTO canales(nombre,descripcion,longitud,latitud,nombreDelSensor,url) VALUES ('$name','$descripcion','$fecha','$url')";
 
 
-//Método por si se insertan 2 usuarios con el mismo correo
-$verificar_usuario_doble = mysqli_query($conn,"SELECT * FROM users WHERE email='$email'");
-if(mysqli_num_rows($verificar_usuario_doble) >0){
-    echo '<script>
-    alert("El usuario ya esta registrado anteriormente");
-    window.history.go(-1);
-    </script>';
-    exit;
-}
-
-$verificar_nombre_doble = mysqli_query($conn,"SELECT * FROM users WHERE name='$name'");
-if(mysqli_num_rows($verificar_nombre_doble) >0){
-    echo '<script>
-    alert("El nombre de usuario ya no se encuentra disponible");
-    window.history.go(-1);
-    </script>';
-    exit;
-}
 //EJECUTAR CONSULTA:
 //La variable conexion tiene almacenado los datos para acceder a la base de datos (servidor, usuario, contraseña y nombre de la bd).
 
