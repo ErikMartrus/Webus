@@ -33,7 +33,7 @@ if(mysqli_num_rows($verificar_usuario_doble) >0){
 $verificar_nombre_doble = mysqli_query($conn,"SELECT * FROM users WHERE name='$name'");
 if(mysqli_num_rows($verificar_nombre_doble) >0){
     echo '<script>
-    alert("El nombre de usuario ya no se encuetra disponible");
+    alert("El nombre de usuario ya no se encuentra disponible");
     window.history.go(-1);
     </script>';
     exit;
@@ -45,6 +45,7 @@ $resultado = mysqli_query($conn, $insertar);
 
 if (!$resultado) {
     echo 'Error al registrarse';
+    mysqli_error
 } else {
     echo 'Usuario registrado exitosamente';
 }
