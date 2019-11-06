@@ -15,7 +15,7 @@ if (!$conn) {
 echo "Connected successfully";
 //la variable nombre va a recibir los datos del campo que se llama nombre, a traves del metodo POST
 //RECIBIR LO DATOS Y ALMACERNALOS EN VARIABLES:
-$nombre = $_POST["nombre"];
+$name= $_POST["name"];
 $description = $_POST["description"];
 $longitud = $_POST["longitud"];
 $latitud = $_POST["latitud"];
