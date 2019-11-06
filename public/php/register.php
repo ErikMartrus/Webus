@@ -45,7 +45,7 @@ $resultado = mysqli_query($conn, $insertar);
 
 if (!$resultado) {
     echo 'Error al registrarse';
-    mysqli_error
+    echo mysqli_error($conn);
 } else {
     echo 'Usuario registrado exitosamente';
 }
