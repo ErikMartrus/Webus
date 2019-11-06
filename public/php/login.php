@@ -22,4 +22,6 @@ $pass = $_POST["pass"];
 session_start();
 //Seleccionamos de la tabla users el campo nombre
 $consulta = "SELECT * FROM users WHERE email='$email'";
+$resultado = mysqli_query($conn, $consulta);
+
 ?>
