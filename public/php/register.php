@@ -1,4 +1,6 @@
 <?php
+//Arrancamos sesion
+session_start();
 $name = $_POST["name"];
 $fechaDeNacimiento = $_POST["fechaDeNacimiento"];
 $email = $_POST["email"];

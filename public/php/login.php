@@ -1,4 +1,6 @@
 <?php
+//Arrancamos la sesion del usuario
+session_start();
 // Create connection
 $servername = "localhost";
 $username = "root";
@@ -17,11 +19,17 @@ echo "Connected successfully";
 //Recibimos los datos del formulario login.html y los almacenamos en variables.
 $email= $_POST["email"];
 $pass = $_POST["pass"];
+if(isset($email) && isset($pass)){
 
-//Arrancamos la sesion del usuario
-session_start();
+}
+
 //Seleccionamos de la tabla users el campo nombre
-$consulta = "SELECT * FROM users WHERE email='$email'";
+$consulta = "SELECT * FROM users WHERE email='$email' AND pass='$pass'";
 $resultado = mysqli_query($conn, $consulta);
+$num_row = mysqli_num_rows($consulta);
+if($num_row == 1){
+      $dato = mysqli_fetch_array($consulta);
+      echo $dato;
+  }
 
 ?>
