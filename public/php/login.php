@@ -20,16 +20,15 @@ echo "Connected successfully";
 $email= $_POST["email"];
 $pass = $_POST["pass"];
 if(isset($email) && isset($pass)){
-
-}
-
 //Seleccionamos de la tabla users el campo nombre
-$consulta = "SELECT * FROM users WHERE email='$email' AND pass='$pass'";
+$consulta = "SELECT * FROM users WHERE email='$email' AND passwd='$pass'";
 $resultado = mysqli_query($conn, $consulta);
-$num_row = mysqli_num_rows($consulta);
+echo $resultado;
+$num_row = mysqli_num_rows($resultado);
 if($num_row == 1){
-      $dato = mysqli_fetch_array($consulta);
+      $dato = mysqli_fetch_array($resultado);
       echo $dato;
   }
+}
 
 ?>
