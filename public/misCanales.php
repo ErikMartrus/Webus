@@ -52,7 +52,7 @@ $user = $_SESSION["user"];
   </header>
   <!-- 80% -->
   <div class="enter">
-    <a href="addCanal.html"><button class="btn btn--iot">Añadir Canal</button></a>
+    <a href="addCanal.php"><button type="submit" class="btn btn--iot">Añadir Canal</button></a>
 </div>
 
   <section class="grid">
