@@ -32,7 +32,7 @@ $user = $_SESSION["user"];
             <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="canales.html">Canales</a>
+            <a class="nav-link" href="canales.php">Canales</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="ayuda.php">Ayuda</a>
