@@ -23,12 +23,19 @@ if(isset($email) && isset($pass)){
 //Seleccionamos de la tabla users el campo nombre
 $consulta = "SELECT * FROM users WHERE email='$email' AND passwd='$pass'";
 $resultado = mysqli_query($conn, $consulta);
-echo $resultado;
-$num_row = mysqli_num_rows($resultado);
-if($num_row == 1){
-      $dato = mysqli_fetch_array($resultado);
-      echo $dato;
+if ($resultado) {
+      while($row = mysqli_fetch_array($resultado)) {
+              if($row["email"]==$email && $row["passwd"]==$pass){
+              $_SESSION["user"] = $row["email"];
+              header('Location: ../misCanales.php');
+              
+          exit;
+              }
+          }
   }
+  //CERRAR CONEXION
+  mysqli_close($conn);
+  
 }
 
 ?>

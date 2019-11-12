@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+session_start();
+$user = $_SESSION["user"];
+?>
 <head>
   <meta charset="utf-8">
   <meta name="description" content="This is an HTML5/CSS3 example">
@@ -13,6 +16,7 @@
 
 <body>
   <!-- 10% -->
+
   <header>
     <nav class="cabecera navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="index.html"><img src="https://picsum.photos/120/38" alt="" style="object-fit: cover"></a>
@@ -39,7 +43,7 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Nombre Usuario <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#"><?php echo $user?><span class="sr-only">(current)</span></a>
 
         </ul>
 

@@ -32,7 +32,7 @@ if(mysqli_num_rows($verificar_usuario_doble) >0){
     exit;
 }
 
-$verificar_nombre_doble = mysqli_query($conn,"SELECT * FROM users WHERE name='$name'");
+$verificar_nombre_doble = mysqli_query($conn,"SELECT *s FROM users WHERE name='$name'");
 if(mysqli_num_rows($verificar_nombre_doble) >0){
     echo '<script>
     alert("El nombre de usuario ya no se encuentra disponible");
