@@ -58,7 +58,7 @@
             <a class="nav-link" href="login.php">Login <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="register.html">Register</a>
+            <a class="nav-link" href="register.php">Register</a>
           </li>
 
         </ul>
@@ -87,7 +87,7 @@
           malesuada ultrices dis, phasellus tortor erat molestie dictum netus vulputate habitasse, libero facilisi nulla
           porttitor facilisis nostra vehicula. </p>
         <div class="enter">
-            <a href="register.html"><button class="btn btn--iot">Empieza ya</button></a>
+            <a href="register.php"><button class="btn btn--iot">Empieza ya</button></a>
         </div>
       </article>
       <article class="articulo">

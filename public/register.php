@@ -43,7 +43,7 @@
             <a class="nav-link" href="login.php">Login <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="register.html">Register</a>
+            <a class="nav-link" href="register.php">Register</a>
           </li>
 
         </ul>
