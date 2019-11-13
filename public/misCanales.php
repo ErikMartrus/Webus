@@ -55,7 +55,7 @@ if (!$conn) {
         </ul>
         <?php
         if(isset($_SESSION["user"])){
-        $nombreUsuario = $_SESSION["user"];
+          $nombreUsuario = $_SESSION["user"]["nombre"];
 
         ?> 
         <ul class="navbar-nav">

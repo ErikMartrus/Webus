@@ -26,7 +26,7 @@ $resultado = mysqli_query($conn, $consulta);
 if ($resultado) {
       while($row = mysqli_fetch_array($resultado)) {
               if($row["email"]==$email && $row["passwd"]==$pass){
-              $_SESSION["user"] = $row["email"];
+              $_SESSION["user"] = $row;
               header('Location: ../misCanales.php');
               
           exit;

@@ -54,7 +54,7 @@
         </ul>
         <?php
         if(isset($_SESSION["user"])){    
-          $nombreUsuario = $_SESSION["user"]; 
+          $nombreUsuario = $_SESSION["user"]["nombre"]; 
         ?>
           <ul class="navbar-nav">
           <li class="nav-item active">

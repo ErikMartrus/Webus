@@ -1,4 +1,5 @@
 <?php
+ session_start();
 // Create connection
 $servername = "localhost";
 $username = "root";
@@ -13,6 +14,11 @@ if (!$conn) {
 }
  
 echo "Connected successfully";
+
+if(isset($_SESSION["user"])){
+    $idUser= $_SESSION["user"]["id"];
+    echo $idUser;
+}
 //la variable nombre va a recibir los datos del campo que se llama nombre, a traves del metodo POST
 //RECIBIR LO DATOS Y ALMACERNALOS EN VARIABLES:
 $name= $_POST["name"];
