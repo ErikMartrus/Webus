@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+  session_start();
+  $user = $_SESSION["user"];
+?>
 <head>
     <meta charset="utf-8">
     <meta name="description" content="This is an HTML5/CSS3 example">
@@ -38,7 +41,17 @@
                         <a class="nav-link" href="contacto.html">Contactos</a>
                     </li>
                 </ul>
-
+                <?php
+        if(isset($_SESSION["user"])){     
+        ?>
+          <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html"><?php echo $user?><span class="sr-only">(current)</span></a>
+          </li>
+          </ul>
+        <?php
+         }else{
+        ?>
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="login.html">Login <span class="sr-only">(current)</span></a>
@@ -48,6 +61,9 @@
                     </li>
 
                 </ul>
+        <?php
+         }
+        ?>
 
             </div>
         </nav>
