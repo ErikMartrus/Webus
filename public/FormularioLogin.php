@@ -54,7 +54,7 @@
         ?>
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="login.php">Login<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="FormularioLogin.php">Login<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="register.php">Register</a>
