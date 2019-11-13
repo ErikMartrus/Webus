@@ -16,7 +16,7 @@ if (!$conn) {
  
 echo "Connected successfully";
 
-//Recibimos los datos del formulario login.html y los almacenamos en variables.
+//Recibimos los datos del formulario login.php y los almacenamos en variables.
 $email= $_POST["email"];
 $pass = $_POST["pass"];
 if(isset($email) && isset($pass)){

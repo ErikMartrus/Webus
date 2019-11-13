@@ -45,7 +45,7 @@
         ?>
           <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="login.html"><?php echo $user?><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="login.php"><?php echo $user?><span class="sr-only">(current)</span></a>
           </li>
           </ul>
         <?php
@@ -53,7 +53,7 @@
         ?>
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="login.html">Login <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="login.php">Login <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="register.html">Register</a>
