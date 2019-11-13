@@ -103,7 +103,7 @@
     </div>
     <div class="contenedor--adCanal">  
         <div class="enter">
-          <a href="misCanales.html"><button type="submit" class="btn btn--iot">Validar Datos Sensor</button></a>
+          <a href="misCanales.php"><button type="submit" class="btn btn--iot">Validar Datos Sensor</button></a>
         </div>
       </div>
     </div>
