@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php
-  session_start();
-  $user = $_SESSION["user"];
+//Arrancamos la sesion del usuario
+session_start();
+// Create connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$bdname = "laboratorio";
+
+$conn = mysqli_connect($servername, $username, $password, $bdname);
+// Check connection
+
+if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+}
 ?>
 <head>
   <meta charset="utf-8">
@@ -42,10 +54,11 @@
         </ul>
         <?php
     if(isset($_SESSION["user"])){
+      $nombreUsuario = $_SESSION["user"];
      ?>
           <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="FormularioLogin.php"><?php echo $user?><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="FormularioLogin.php"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="../php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
