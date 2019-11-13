@@ -37,7 +37,7 @@
             <a class="nav-link" href="ayuda.php">Ayuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contactos</a>
+            <a class="nav-link" href="contacto.php">Contactos</a>
           </li>
         </ul>
     <?php
