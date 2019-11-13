@@ -14,6 +14,7 @@
   
   if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
+  }
 ?>
 <head>
     <meta charset="utf-8">
@@ -53,9 +54,9 @@
                     </li>
                 </ul>
                 <?php
-        if(isset($_SESSION["user"])){     
-            $nombreUsuario = $_SESSION["user"];
-        ?>
+                    if(isset($_SESSION["user"])){     
+                    $nombreUsuario = $_SESSION["user"];
+                ?>
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="FormularioLogin.php"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
@@ -80,7 +81,7 @@
          }
         ?>
 
-            </div>
+            </div>   
         </nav>
     </header>
     <!-- 80% -->

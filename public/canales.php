@@ -14,6 +14,7 @@
    
    if (!$conn) {
          die("Connection failed: " . mysqli_connect_error());
+   }
 ?>
 <head>
   <meta charset="utf-8">
