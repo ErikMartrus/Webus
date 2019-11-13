@@ -48,7 +48,9 @@
           <li class="nav-item active">
             <a class="nav-link" href="FormularioLogin.php"><?php echo $user?><span class="sr-only">(current)</span></a>
           </li>
-
+          <li class="nav-item active">
+            <a class="nav-link" href="../php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
+          </li>
         </ul>
         <?php
     }else{
