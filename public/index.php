@@ -110,11 +110,13 @@
       <article class="articulo">
         <header>
           <div class="grafica1">
-            <ul>
-              <li class="listaDatosSensor"><a href=""></a>Info del Canal A</a></li>
-              <li class="listaDatosSensor"><a href=""></a>Autor</a></li>
-              <li class="listaDatosSensor"><a href=""></a>URL</a></li>
-            </ul>
+          <header>
+                <h1>Últimos canales</h1>
+            </header>
+
+            <?php
+                include "../php/ultimosCanales.php";
+            ?>
   
           </div>
           <div class="grafica2">
