@@ -121,7 +121,7 @@
             </header>
 
             <?php
-                include "../php/ultimosCanales.php";
+             //   include "../php/ultimosCanales.php";
             ?>
         </header>
       </article>
