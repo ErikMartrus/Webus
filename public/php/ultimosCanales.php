@@ -20,7 +20,7 @@ if (!$conn) {
 echo "Connected successfully";
 
     //petición sql para obbtener los dos últimos dos ingresos a través del uso de DESC LIMIT pasando el número de parametros que deseamos obtener
-    $consulta = "SELECT * from canales ORDER BY id DESC LIMIT 2";
+    $consulta = "SELECT * from canales ORDER BY fecha DESC LIMIT 2";
 
     if($resultado=mysqli_query($conn, $consulta)){
         if(mysqli_num_rows($resultado)){

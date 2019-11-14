@@ -27,9 +27,10 @@ $longitud = $_POST["longitud"];
 $latitud = $_POST["latitud"];
 $nombreDelSensor = $_POST["nombreDelSensor"];
 $url= rand() . "\n"; //n significa new line(salto de línea) y el punto =+
+$dia = date("Y-m-d H:i:s");
 
 //saber id del usuario
-$insertar = "INSERT INTO canales(id_user,nombreCanal,descripcion,longitud,latitud,nombreSensor,url) VALUES ('$idUser','$name','$description','$longitud','$latitud','$nombreDelSensor','$url')";
+$insertar = "INSERT INTO canales(id_user,nombreCanal,descripcion,longitud,latitud,nombreSensor,url,fecha) VALUES ('$idUser','$name','$description','$longitud','$latitud','$nombreDelSensor','$url','$dia')";
 
 
 //EJECUTAR CONSULTA:
