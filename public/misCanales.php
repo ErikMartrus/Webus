@@ -61,13 +61,25 @@ if (!$conn) {
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="#"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
-
+          <li class="nav-item">
+            <a class="nav-link" href="../php/logOut.php">LogOut</a>
+          </li>
         </ul>
         <?php
           }else{
             header('Location: FormularioLogin.php');
-          }
+        
         ?>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="FormularioLogin.php">Login<span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="register.php">Register</a>
+          </li>
+        </ul>
+      <?php
+          }
+      ?>
       </div>
     </nav>
   </header>
