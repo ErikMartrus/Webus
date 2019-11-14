@@ -2,3 +2,114 @@
 <script src="./grafica/modules/series-label.js"></script>
 <script src="./grafica/modules/exporting.js"></script>
 <script src="./grafica/modules/export-data.js"></script>
+
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$bdname = "laboratorio";
+
+$conn = mysqli_connect($servername, $username, $password, $bdname);
+// Check connection
+
+if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+}
+ 
+echo "Connected successfully";
+
+    //petición sql
+    $sql = "SELECT * from canales ORDER BY fecha DESC LIMIT 2";
+
+    if($result=mysqli_query($connection, $sql)){
+        if(mysqli_num_rows($result)){
+            while($row = mysqli_fetch_assoc($result)){
+                $idCanal = $row['id'];
+                $nombreCanal = $row['nombreCanal'];
+                $descripcion = $row['descripcion'];
+                $url = $row['url'];
+                $fecha = $row['fecha'];
+
+                $sql= "SELECT * from datossensores WHERE id_canal = '$idCanal'";
+
+                $data = "[";
+                $hora = "[";
+
+                if($resultS=mysqli_query($connection, $sql)){
+                    if(mysqli_num_rows($resultS)){
+                        while($row = mysqli_fetch_assoc($resultS)){
+                            $data .= $row['dato'] .",";
+                            $hora .= "'".$row['fecha']."',";
+                        }
+                    }
+                }else{
+                    echo "Error";
+                }
+
+                $data = $data."]";
+                $hora = $hora."]";
+
+                
+
+                echo "
+                <section id=\"grafica\">
+                            <div id=\"".$url."\" style=\"margin: 0 auto\"></div>
+                            <br>
+                            <script type=\"text/javascript\">
+Highcharts.chart('".$url."', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: 'Datos del canal ".$nombreCanal."'
+    },
+    subtitle: {
+        text: '".$descripcion."'
+    },
+    xAxis: {
+        title: {
+            text: 'Tiempo'
+        },
+        categories:".$hora."
+    },
+    yAxis: {
+        title: {
+            text: 'RSS'
+        },
+    },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 4,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+    series: [{
+        name: '".$url."',
+        marker: {
+            symbol: 'square'
+        },
+        data:".$data."
+
+    }]
+});
+        </script>
+                    </section>";
+
+
+
+
+
+
+            }
+        }
+    }
+
+?>
