@@ -22,9 +22,9 @@ echo "Connected successfully";
     //petición sql para obbtener los dos últimos dos ingresos a través del uso de DESC LIMIT pasando el número de parametros que deseamos obtener
     $consulta = "SELECT * from canales ORDER BY id DESC LIMIT 2";
 
-    if($result=mysqli_query($connection, $sql)){
-        if(mysqli_num_rows($result)){
-            while($row = mysqli_fetch_assoc($result)){
+    if($resultado=mysqli_query($conn, $consulta)){
+        if(mysqli_num_rows($resultado)){
+            while($row = mysqli_fetch_assoc($resultado)){
                 $idCanal = $row['id'];
                 $nombreCanal = $row['nombreCanal'];
                 $descripcion = $row['descripcion'];
