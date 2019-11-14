@@ -36,7 +36,7 @@ echo "Connected successfully";
                 $data = "[";
                 $hora = "[";
 
-                if($resultS=mysqli_query($connection, $sql)){
+                if($resultS=mysqli_query($conn, $sql)){
                     if(mysqli_num_rows($resultS)){
                         while($row = mysqli_fetch_assoc($resultS)){
                             $data .= $row['dato'] .",";
