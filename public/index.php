@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php
+  <?php  
   //Arrancamos la sesion del usuario
   session_start();
   // Create connection
@@ -115,6 +115,7 @@
               <li class="listaDatosSensor"><a href=""></a>Autor</a></li>
               <li class="listaDatosSensor"><a href=""></a>URL</a></li>
             </ul>
+  
           </div>
           <div class="grafica2">
             <ul>
