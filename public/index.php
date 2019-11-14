@@ -24,6 +24,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/misEstilos.css">
+
+   <!-----Gráfica----->
+   <script src="../grafica/highcharts.js"></script>
+    <script src="../grafica/modules/series-label.js"></script>
+    <script src="../grafica/modules/exporting.js"></script>
+    <script src="../grafica/modules/export-data.js"></script>
 </head>
 
 <body>
@@ -117,15 +123,6 @@
             <?php
                 include "../php/ultimosCanales.php";
             ?>
-  
-          </div>
-          <div class="grafica2">
-            <ul>
-              <li class="listaDatosSensor"><a href=""></a>Info del Canal B</a></li>
-              <li class="listaDatosSensor"><a href=""></a>Autor</a></li>
-              <li class="listaDatosSensor"><a href=""></a>URL</a></li>
-            </ul>
-          </div>
         </header>
       </article>
     </section>
