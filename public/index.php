@@ -121,7 +121,7 @@
             </header>
 
             <?php
-             //   include "../php/ultimosCanales.php";
+            include " ../php/ultimosCanales.php";
             ?>
         </header>
       </article>
@@ -145,6 +145,7 @@
       <li class="page-item"><a class="page-link" href="#">Next</a></li>
     </ul>
   </nav> -->
+  
   <!-- 10% -->
   <footer id="piePagina">
     <p class="text">Footer</p>
