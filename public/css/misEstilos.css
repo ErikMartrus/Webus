@@ -175,8 +175,18 @@ p.infoLateralPost1 {
     font-size: 50px;
 }
 
+#graficas{
+    height: 500px;
+}
+
 .grafica1 {
     border: 1px solid #00FFFF;
+}
+#grafica{
+    width: 45%;
+    height: 400px;
+    margin: 20px;
+    float: left;
 }
 
 .articuloCanales {

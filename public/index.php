@@ -25,7 +25,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/misEstilos.css">
   <script> function get_informacion() { 
-        $("#info").load("./php/actualizar.php"); 
+        $("#info").load("../php/actualizar.php"); 
         setTimeout(get_informacion,1000); }; </script>
 
 
@@ -117,7 +117,7 @@
             <a href="register.php"><button class="btn btn--iot">Empieza ya</button></a>
         </div>
       </article>
-      <article class="articulo">
+      <article class="articulo" id="graficas">
         <header>
           <div class="grafica1">
           <header>
@@ -132,8 +132,10 @@
     </section>
 
     <aside id="lateral">
+    <div id="info">
     <p class="infoLateralPost1">Informacion</p>
       <script> setTimeout(get_informacion,1000); </script>
+    </div>
     </aside>
   </div>
   <!-- Esto es una paginacion desde Boostrap 4 -->
