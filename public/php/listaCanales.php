@@ -1,5 +1,4 @@
 <?php
-session_start();
 //comprobar sesión
 if(!isset($_SESSION["user"])){
     echo "Usuario no validado" . "<br>";
@@ -17,7 +16,6 @@ if(!isset($_SESSION["user"])){
           die("Connection failed: " . mysqli_connect_error());
     }
      
-    echo "Connected successfully";
 
     //petición sql
     $email = $_SESSION["user"]["email"]; 
@@ -62,7 +60,7 @@ if(!isset($_SESSION["user"])){
                                 </figure>
                             </aside>
                             <?php
-                            echo"<p>Información del canal " . $nombreCanal. "</p>
+                            echo"<p>Información del canal: " . $nombreCanal. "</p>
                             <p>Descripción: ". $descripcion. "</p>
                             <p>Fecha de creación: ".$fecha."</p>
                             <p>Enlace URL: " . $url. "</p>

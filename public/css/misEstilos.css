@@ -7,7 +7,6 @@ html {}
 
 body {
     height: 100vh;
-    border: 2px solid black;
 }
 
 h1, h2, h3, h4 {}
@@ -210,7 +209,7 @@ article h4 {
     padding: 20px;
     margin-bottom: 3.5px;
     margin-top: 1px;
-    height: 23.5vh;
+    height: 100%;
     float: right;
 }
 
