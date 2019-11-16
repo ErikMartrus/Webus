@@ -184,7 +184,13 @@ p.infoLateralPost1 {
     border: 10px black;
     background-color: #1E90FF;
 }
+.articuloListaCanales {
+    border: 10px black;
+    text-align: center;
+    color: white;
+    background-color: #1E90FF;
 
+}
 article h3 {
     font-size: 1.25em;
     text-align: left;

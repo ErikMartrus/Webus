@@ -26,7 +26,7 @@ if (!$conn) {
                 $fecha = $row['fecha'];
 
                 
-                echo "<section class=\"channels-section\">
+                echo "<section class=\"articuloListaCanales\">
                         <article>
                             <p>Información del canal: " . $nombreCanal. "</p>
                             <p>Descripción: ". $descripcion. "</p>
