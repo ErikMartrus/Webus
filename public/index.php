@@ -24,6 +24,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/misEstilos.css">
+  <script> function get_informacion() { 
+        $("#info").load("./servidor/informacion_actualizada.php"); 
+        setTimeout(get_informacion,1000); }; </script>
+
 
    <!-----Gráfica----->
    <script src="../grafica/highcharts.js"></script>
@@ -128,11 +132,8 @@
     </section>
 
     <aside id="lateral">
-      <p class="infoLateralPost1">Información actualizada de los datos almacenados en la BBDD (al menos los siguientes):
-      </p>
-      <p class="infoLateralPost">Número de usuarios</p>
-      <p class="infoLateralPost">Canales</p>
-      <p class="infoLateralPost">Bytes/MB almacenados</p>
+    <p class="infoLateralPost1">Informacion</p>
+      <script> setTimeout(get_informacion,1000); </script>
     </aside>
   </div>
   <!-- Esto es una paginacion desde Boostrap 4 -->
