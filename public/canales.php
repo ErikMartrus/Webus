@@ -98,37 +98,9 @@
     </a>
     <article class="column articuloDatosCanales">
       <header>
-        <ul>
-          <div><li class="listaDatosSensor"><a href=""></a>Info del Canal A</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Autor</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Descripción</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Fecha</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Enlace URL(habilitar enlace para acceder a la representación
-            gráfica de los datos almacenados) </a></li></div>
-        </ul>
-      </header>
-    </article>
-    <article class="column articuloDatosCanales">
-      <header>
-        <ul>
-          <div><li class="listaDatosSensor"><a href=""></a>Info del Canal A</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Autor</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Descripción</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Fecha</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Enlace URL(habilitar enlace para acceder a la representación gráfica de los datos almacenados)</a></li></div>
-        </ul>
-      </header>
-    </article>
-    <article class="column articuloDatosCanales">
-      <header>
-        <ul>
-          <div><li class="listaDatosSensor"><a href=""></a>Info del Canal A</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Autor</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Descripción</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Fecha</a></li></div>
-          <div><li class="listaDatosSensor"><a href=""></a>Enlace URL(habilitar enlace para acceder a la representación
-            gráfica de los datos almacenados) </a></li></div>
-        </ul>
+     <?php
+        include "./php/todosLosCanales.php";
+      ?>
       </header>
     </article>
   </section>
