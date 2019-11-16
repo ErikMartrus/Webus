@@ -300,3 +300,8 @@ input, label {
     grid-template-columns: 1fr 360px 1fr;
     margin-bottom: 220px;
 }
+.img-borrar {
+    display: block;
+    margin: unset;
+    width: 5%;
+}

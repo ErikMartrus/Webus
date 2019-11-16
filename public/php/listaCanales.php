@@ -38,7 +38,7 @@ if(!isset($_SESSION["user"])){
     //petición sql para buscar los canales
     $sql = "SELECT * from canales WHERE id_user = '$idUsuario'";
 
-    if($result = mysqli_query($connection, $sql)){
+    if($result = mysqli_query($conn, $sql)){
         //comprobar que el email está en la BD
         if(mysqli_num_rows($result)){
             //Lista de canales
@@ -57,7 +57,7 @@ if(!isset($_SESSION["user"])){
                         <article>
                             <aside>
                                 <figure>
-                                    <img src="servidor/delete-icon.png" onClick="borrar(
+                                    <img class="img-borrar"  src="../assets/img/delete-icon.png" onClick="borrar(
                                     <?php echo "$idCanal";?>)">
                                 </figure>
                             </aside>

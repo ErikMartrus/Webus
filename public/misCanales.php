@@ -98,27 +98,11 @@ if (!$conn) {
     </article>
     <article class="column articuloDatosCanales">
       <header>
-        <ul>
-          <li class="listaDatosSensor"><a href=""></a>Info del Canal A</a></li>
-          <li class="listaDatosSensor"><a href=""></a>Autor</a></li>
-          <li class="listaDatosSensor"><a href=""></a>Descripción</a></li>
-          <li class="listaDatosSensor"><a href=""></a>Fecha</a></li>
-          <li class="listaDatosSensor"><a href=""></a>Enlace URL(habilitar enlace para acceder a la representación
-            gráfica de los datos almacenados) </a></li>
-        </ul>
+      <?php
+        include './php/listaCanales.php';
+    ?>
       </header>
     </article>
-    <article class="column articuloDatosCanales">
-      <header>
-        <ul>
-          <li class="listaDatosSensor"><a href=""></a>Info del Canal A</a></li>
-          <li class="listaDatosSensor"><a href=""></a>Autor</a></li>
-          <li class="listaDatosSensor"><a href=""></a>Descripción</a></li>
-          <li class="listaDatosSensor"><a href=""></a>Fecha</a></li>
-          <li class="listaDatosSensor"><a href=""></a>Enlace URL(habilitar enlace para acceder a la representación
-            gráfica de los datos almacenados) </a></li>
-        </ul>
-      </header>
   </section>
 
   <!-- Esto es una paginacion desde Boostrap 4 -->
