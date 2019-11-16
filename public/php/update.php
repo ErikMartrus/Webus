@@ -1,34 +1,59 @@
 <?php
+    if($_SERVER['REQUEST_METHOD']=="POST"){
+        if(isset($_POST['dato'])&&isset($_POST['url'])){
+            $dato = $_POST['dato'];
+            $url = $_POST['url'];
 
-function saveInformationToDatabase($url,$dato){
-//cojo los datos del campo usuairo y los almaceno en la variable $usuario
-$fecha= date("Y-m-d H:i:s");
-//conectar a la base de datos
-//la url es de la tabla canales id canal de tabla sensores
-$conexion = mysqli_connect("localhost", "root", "", "bd_prueba");
-//voy a seleccionar el campo id canal en la base de datos que sea igual al dato que he ingresado. El dato que he ingresado tiene que coincidir con el de la base de datos
-$consulta = "SELECT * FROM canales WHERE url='$url'";
-$resultado=mysqli_query($conexion, $consulta);
-//si ha conincidido me da un resultado y sino me da cero
-$idToSave=0;
-if ($row=mysqli_fetch_assoc($resultado)) {
-    $idToSave= $row("id");
+            $hoy = date("Y-m-d H:i:s");
 
-}
+            //conectarnos a la BD
+            $host = "localhost";
+            $database = "l1_pweb";
+            $user = "root";
+            $pass = "";
 
-$insertar = "INSERT INTO datossensores(idcanal,dato,fecha) VALUES ('$idToSave','$dato','$fecha')";
+            $connection = mysqli_connect($host,$user,$pass, $database);
 
-//liberar los resultados, para que no consuma espacio en memoria
-mysqli_free_result($resultado);
-mysqli_close($conexion);
-}
+            //comprobar error
+            if(mysqli_connect_errno()){
+                echo "ERROR";
+                die(mysqli_connect_error()); //die == exit)
+            }
 
-if($_SERVER["REQUEST_METHOD"]=="POST"){
-    if(isset($_POST["url"])&& isset($_POST["dato"])){
-        $urlCompartir=$_POST["url"];
-        $datoCompartir=$_POST["dato"];
-        saveInformationToDatabase($urlCompartir, $datoCompartir);
+            //petición url para el canal
+            $sql = "SELECT * from canales WHERE url = '$url'";
+
+            echo $sql;
+
+            if($result = mysqli_query($connection, $sql)){
+                if(mysqli_num_rows($result)){
+                    $row = mysqli_fetch_assoc($result);
+                    $idCanal = $row['id'];
+                }else{
+                    echo "Canal inválido";
+                }
+            }else{
+                echo mysqli_error($connection);
+            }
+
+            //petición sql para el sensor
+            $sql = "INSERT INTO datossensores (id_canal, dato, fecha)
+            VALUES ('$idCanal', '$dato', '$hoy')";
+
+            if(mysqli_query($connection, $sql)){
+                echo "Correcto";
+            }else{
+                echo mysqli_error($connection);
+            }
+
+
+
+
+
+
+
+
+
+        }
     }
-}
-
 ?>
