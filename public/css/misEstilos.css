@@ -176,7 +176,7 @@ p.infoLateralPost1 {
 }
 
 #graficas{
-    height: 500px;
+    height: 250px;
 }
 
 .grafica1 {
@@ -184,7 +184,7 @@ p.infoLateralPost1 {
 }
 #grafica{
     width: 45%;
-    height: 400px;
+    height: 250px;
     margin: 20px;
     float: left;
 }
