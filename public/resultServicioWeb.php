@@ -90,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     }
 }
 
-    $request = 'http://localhost/L1_PWEB/servidor/webService.php?desde=' . $desde . '&hasta=' . $hasta;
+    $request = 'http://localhost/resultServicioWeb.php.php?desde=' . $desde . '&hasta=' . $hasta;
     $http = curl_init($request);
     curl_setopt($http, CURLOPT_HEADER, false);
     curl_setopt($http, CURLOPT_RETURNTRANSFER, true);
