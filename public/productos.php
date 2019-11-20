@@ -20,17 +20,10 @@ if (!$conn) {
   <meta charset="utf-8">
   <meta name="description" content="This is an HTML5/CSS3 example">
   <meta name="keywords" content="HTML5, CSS3, JavaScript">
-  <title>Mis Canales webIoT</title>
+  <title>Mis Productos Web IoT</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/misEstilos.css">
-  <script> function borrar(dato){
-        alert(dato);
-        $.post("php/borrar_canal.php", {id: dato}, location.reload());
-        
-    }
-    
-    </script>
 </head>
 
 <body>
@@ -94,15 +87,27 @@ if (!$conn) {
     </nav>
   </header>
   <!-- 80% -->
-  <div class="enter">
-    <a href="addCanal.php"><button type="submit" class="btn btn--iot">Añadir Producto</button></a>
-</div>
+  <form  action="php/register.php" method="POST">
+    <div class="contenedor--form">
+      <div class="items--form">
+        <label for="name">Nombre: <span class="required">*</span></label>
+        <input type="text" id="name" name="name" value="" placeholder="Nombre Usuario" required autofocus />
+      </div>
+      <div class="items--form">
+        <label for="name">Descripción: <span class="required">*</span></label>
+        <input type="text" id="description" name="description" value="" placeholder="Breve descripcion" required autofocus />
+      </div>
+      <div class="items--form">
+      <label for="name">Precio del producto: <span class="required"></span></label>
+      <input type="number" name="precio"> </p>
+      </div>
+    </div>
 
   <section class="grid">
     <article class=" column articuloCanales ">
       <header>
         <hgroup>
-          <h3>Listado de de todos los productos</h3>
+          <h3>Listado de todos los productos</h3>
         </hgroup>
       </header>
     </article>
