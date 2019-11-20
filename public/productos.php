@@ -87,7 +87,7 @@ if (!$conn) {
     </nav>
   </header>
   <!-- 80% -->
-  <form  action="php/register.php" method="POST">
+  <form  action="php/addProducto.php" method="POST">
     <div class="contenedor--form">
       <div class="items--form">
         <label for="name">Nombre: <span class="required">*</span></label>
@@ -102,7 +102,7 @@ if (!$conn) {
       <input type="number" name="precio"> </p>
       </div>
       <div class="enter">
-          <a href="misCanales.php"><button type="submit" class="btn btn--iot">Añadir producto</button></a>
+          <a href="misCanales.php"><button type="submit" class="btn btn--iot">Comprar producto</button></a>
         </div>
     </div>
 
