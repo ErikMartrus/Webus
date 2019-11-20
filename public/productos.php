@@ -95,14 +95,14 @@ if (!$conn) {
   </header>
   <!-- 80% -->
   <div class="enter">
-    <a href="addCanal.php"><button type="submit" class="btn btn--iot">Añadir Canal</button></a>
+    <a href="addCanal.php"><button type="submit" class="btn btn--iot">Añadir Producto</button></a>
 </div>
 
   <section class="grid">
     <article class=" column articuloCanales ">
       <header>
         <hgroup>
-          <h3>Listado de todos los canales dados de alta del usuario</h3>
+          <h3>Listado de de todos los productos</h3>
         </hgroup>
       </header>
     </article>
