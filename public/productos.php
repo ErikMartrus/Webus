@@ -102,7 +102,7 @@ if (!$conn) {
       <input type="number" name="precio"> </p>
       </div>
       <div class="enter">
-          <a href="misCanales.php"><button type="submit" class="btn btn--iot">Comprar producto</button></a>
+          <a href="misCanales.php"><button type="submit" class="btn btn--iot">Añadir producto</button></a>
         </div>
     </div>
 
