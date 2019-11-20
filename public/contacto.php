@@ -52,6 +52,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.php">Contactos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.php">Productos</a>
+                    </li>
                 </ul>
                 <?php
                     if(isset($_SESSION["user"])){     
