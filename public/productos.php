@@ -101,6 +101,9 @@ if (!$conn) {
       <label for="name">Precio del producto: <span class="required"></span></label>
       <input type="number" name="precio"> </p>
       </div>
+      <div class="enter">
+          <a href="misCanales.php"><button type="submit" class="btn btn--iot">Añadir producto</button></a>
+        </div>
     </div>
 
   <section class="grid">
