@@ -105,6 +105,7 @@ if (!$conn) {
           <a href="misCanales.php"><button type="submit" class="btn btn--iot">Añadir producto</button></a>
         </div>
     </div>
+    </form>
 
   <section class="grid">
     <article class=" column articuloCanales ">
@@ -117,7 +118,7 @@ if (!$conn) {
     <article class="column articuloDatosCanales">
       <header>
       <?php
-        include './php/listaCanales.php';
+        include './php/listaProductos.php';
     ?>
       </header>
     </article>
