@@ -91,19 +91,19 @@ if (!$conn) {
     <div class="contenedor--form">
       <div class="items--form">
         <label for="name">Nombre: <span class="required">*</span></label>
-        <input type="text" id="name" name="name" value="" placeholder="Nombre Usuario" required autofocus />
+        <input type="text" id="name" name="name" value="" placeholder="Nombre del producto" required autofocus />
       </div>
       <div class="items--form">
         <label for="name">Descripción: <span class="required">*</span></label>
         <input type="text" id="description" name="description" value="" placeholder="Breve descripcion" required autofocus />
       </div>
       <div class="items--form">
-      <label for="name">Precio del producto: <span class="required"></span></label>
-      <input type="number" name="precio"> </p>
+        <label for="name">Precio del producto: <span class="required"></span></label>
+        <input type="number" name="precio"> 
       </div>
-      <div class="enter">
+      <div class="enter items--form">
           <a href="misCanales.php"><button type="submit" class="btn btn--iot">Añadir producto</button></a>
-        </div>
+      </div>
     </div>
     </form>
 
