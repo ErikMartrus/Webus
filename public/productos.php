@@ -98,7 +98,7 @@ if (!$conn) {
         <input type="text" id="description" name="description" value="" placeholder="Breve descripcion" required autofocus />
       </div>
       <div class="items--form">
-        <label for="name">Precio del producto: <span class="required"></span></label>
+        <label for="name">Precio en euros €: <span class="required"></span></label>
         <input type="number" name="precio"> 
       </div>
       <div class="enter items--form">

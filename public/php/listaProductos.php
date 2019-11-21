@@ -63,7 +63,7 @@ if(!isset($_SESSION["user"])){
                             echo"<p>Información del canal: " . $nombreProducto. "</p>
                             <p>Descripción: ". $descripcion. "</p>
                             <p>Fecha de creación: ".$fecha."</p>
-                            <p>Precio del producto: " . $precio. "</p>
+                            <p>Precio del producto: " . $precio. " €</p>
                         </article>
                     </section>";
             }
