@@ -26,7 +26,7 @@ $description = $_POST["description"];
 $longitud = $_POST["longitud"];
 $latitud = $_POST["latitud"];
 $nombreDelSensor = $_POST["nombreDelSensor"];
-$url= rand() . "\n"; //n significa new line(salto de línea) y el punto =+
+$url= rand(); //n significa new line(salto de línea) y el punto =+
 $dia = date("Y-m-d H:i:s");
 
 //saber id del usuario

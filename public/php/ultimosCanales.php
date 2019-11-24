@@ -29,6 +29,9 @@ echo "Connected successfully";
                 $nombreCanal = $row['nombreCanal'];
                 $descripcion = $row['descripcion'];
                 $url = $row['url'];
+                $url=mysqli_real_escape_string($conn,$url);
+               // $url [strlen($url)-2] = "\0";
+                
                 $fecha = $row['fecha'];
 
                 $sql= "SELECT * from datossensores WHERE id_canal = '$idCanal'";
@@ -47,8 +50,8 @@ echo "Connected successfully";
                     echo "Error";
                 }
 
-                $data = $data."]";
-                $hora = $hora."]";
+                $data [strlen($data)-1] = "]";
+                $hora [strlen($hora)-1] = "]";
 
                 
 
