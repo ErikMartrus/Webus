@@ -45,5 +45,5 @@ if($result = mysqli_query($conn, $sql)){
 
 echo "<p>Número de usuarios: " .$numeroUsuarios."</p>";
 echo "<p>Número de canales: " .$numeroCanales."</p>";
-echo "<p>Bytes almacenados: " .$numeroSensores."</p>";
+echo "<p>Bytes almacenados: " .$numeroSensores. " MB</p>";
 ?>

@@ -48,6 +48,9 @@ h1, h2, h3, h4 {}
     height: 118.5vh;
 }
 
+#info {
+    margin: 15px;
+}
 #main {
     margin-right: 200px;
     height: 80vh;
