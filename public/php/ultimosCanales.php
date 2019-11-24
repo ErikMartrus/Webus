@@ -17,7 +17,7 @@ if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
 }
  
-echo "Connected successfully";
+
 
     //petición sql para obbtener los dos últimos dos ingresos a través del uso de DESC LIMIT pasando el número de parametros que deseamos obtener
     $consulta = "SELECT * from canales ORDER BY fecha DESC LIMIT 2";

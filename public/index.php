@@ -129,7 +129,7 @@
       </article>
       <article class="articulo" id="graficas">
         <header>
-          <div class="grafica1">
+          <div>
           <header>
                 <h1>Últimos canales</h1>
             </header>
@@ -160,7 +160,7 @@
   </nav> -->
   
   <!-- 10% -->
-  <footer id="piePagina">
+  <footer id="piePaginaIndex">
     <p class="text">Footer</p>
   </footer>
 
