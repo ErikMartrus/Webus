@@ -24,10 +24,10 @@ echo "Connected successfully";
 
         //Borrar canales
     $sql = "DELETE  from canales WHERE id = '$idCanal'";
-    echo "hola";
+    echo "Canal Borrado";
 
         if($result = mysqli_query($conn, $sql)){
-            echo "hhdhhddh";
+            
         }else{
             echo mysqli_error($conn);
         }

@@ -29,7 +29,7 @@
   <script> 
   function get_informacion() { 
     
-        $("#info").load("../php/actualizar.php"); 
+        $("#info").load("php/actualizar.php"); 
         setTimeout(get_informacion,1000); 
         };
   
@@ -85,7 +85,7 @@
             <a class="nav-link" href="FormularioLogin.php"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="../php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
           </li>
         </ul>
         <?php
@@ -138,7 +138,7 @@
             </header>
 
             <?php
-            include "./php/ultimosCanales.php";
+            include "php/ultimosCanales.php";
             ?>
         </header>
       </article>

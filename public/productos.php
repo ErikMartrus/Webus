@@ -65,7 +65,7 @@ if (!$conn) {
           <li class="nav-item active">
             <a class="nav-link" href="#"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
           <li class="nav-item">
-            <a class="nav-link" href="../php/logOut.php">LogOut</a>
+            <a class="nav-link" href="php/logOut.php">LogOut</a>
           </li>
         </ul>
         <?php
@@ -118,7 +118,7 @@ if (!$conn) {
     <article class="column articuloDatosCanales">
       <header>
       <?php
-        include './php/listaProductos.php';
+        include 'php/listaProductos.php';
     ?>
       </header>
     </article>
