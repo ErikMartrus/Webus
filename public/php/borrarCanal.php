@@ -18,14 +18,16 @@ echo "Connected successfully";
 
 
     //borrar sensores
-    $sql = "DELETE from datossensores WHERE id_canal = '$idUser'";
+    $sql = "DELETE from datossensores WHERE id_canal = '$idCanal'";
 
     if($result = mysqli_query($conn, $sql)){
 
         //Borrar canales
     $sql = "DELETE  from canales WHERE id = '$idCanal'";
+    echo "hola";
 
         if($result = mysqli_query($conn, $sql)){
+            echo "hhdhhddh";
         }else{
             echo mysqli_error($conn);
         }
