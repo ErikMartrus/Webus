@@ -47,7 +47,7 @@
   <!-- 10% -->
   <header>
     <nav class="cabecera navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.php"><img src="assets/img/IOT.png/120/38" alt="" style="object-fit: cover"></a>
+      <a class="navbar-brand" href="index.php"><img class="img-Index" src="assets/img/IOT.png" alt="" style="object-fit: cover"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
