@@ -99,10 +99,12 @@ if (!$conn) {
         }
         ?>
         </select>
-        <br>
+      </div>
+        <div class="items--form">
         <label>Cantidad</label>
         <input type="number" name="cantidad" value="1">
-        <br>
+        </div>
+        <div class="items--form">
         <input type="submit" value="Añadir al Carrito">
         </div>
     </div>

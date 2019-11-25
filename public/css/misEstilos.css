@@ -238,6 +238,12 @@ input, label {
     width: auto;
 }
 
+select{
+    text-align: center;
+    margin: 5px;
+    width: auto;  
+}
+
 .contenedor--form {
     display: grid;
     grid-template-columns: 1fr 360px 1fr;
