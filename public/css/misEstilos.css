@@ -347,3 +347,11 @@ select{
     width: 41.5px;
     height: 71.5px;
 }
+
+.btn--addProducto {
+    display: block;
+    width: 350px;
+    background-color: #1E90FF;
+    margin-bottom: 20px;
+    color: white;
+}
