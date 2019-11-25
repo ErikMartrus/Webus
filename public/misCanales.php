@@ -29,7 +29,7 @@ if (!$conn) {
   <script> 
     function borrar(dato){
         alert(dato);
-        $.post("php/borrar_canal.php", {id: dato}, location.reload());
+        $.post("../php/borrar_canal.php", {id: dato}, location.reload());
         
     }
     

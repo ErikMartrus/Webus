@@ -62,7 +62,7 @@ if(!isset($_SESSION["user"])){
                             <?php
                             echo"<p>Información del canal: " . $nombreCanal. "</p>
                             <p>Descripción: ". $descripcion. "</p>
-                            <p>Fecha de creación: ".$fecha."</p>
+                            <p>Fecha de creación: ".$fecha. "</p>
                             <p>Enlace URL: " . $url. "</p>
                         </article>
                     </section>";
