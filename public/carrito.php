@@ -164,7 +164,7 @@ if (!$conn) {
 
 
   <!-- 10% -->
-  <footer id="piePagina">
+  <footer id="piePaginaLogin">
     <p class="text">Footer</p>
   </footer>
 

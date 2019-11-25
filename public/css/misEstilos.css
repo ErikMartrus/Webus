@@ -342,6 +342,8 @@ select{
     width: 350.5px;
     background-color: #1E90FF;
     color: white;
+    height: 50px;
+    margin-top: 10px;
 }
 .img-Index {
     width: 41.5px;
@@ -354,4 +356,5 @@ select{
     background-color: #1E90FF;
     margin-bottom: 20px;
     color: white;
+    
 }
