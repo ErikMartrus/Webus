@@ -105,7 +105,7 @@ if (!$conn) {
         <input type="number" name="cantidad" value="1">
         </div>
         <div class="items--form">
-        <input type="submit" value="Añadir al Carrito">
+        <input class="btn--add" type="submit" value="Añadir al Carrito">
         </div>
     </div>
     </form>
