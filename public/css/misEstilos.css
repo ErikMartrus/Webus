@@ -112,7 +112,6 @@ a:hover {
 
 a:visited {
     text-decoration: underline;
-    color: #00FFFF;
 }
 
 article h1 {
@@ -357,4 +356,12 @@ select{
     margin-bottom: 20px;
     color: white;
     
+}
+#piePaginaCarrito {
+    border: 10px solid #1E90FF;
+    margin-top: 355px;
+    height: 6vh;
+    position: relative;
+    top: 2px;
+    background-color: #1E90FF;
 }
