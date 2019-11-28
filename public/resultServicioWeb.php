@@ -38,6 +38,9 @@
           <li class="nav-item">
             <a class="nav-link" href="productos.php">Productos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carrito.php">Carrito</a>
+          </li>
         </ul>
     <?php
     if(isset($_SESSION["user"])){
