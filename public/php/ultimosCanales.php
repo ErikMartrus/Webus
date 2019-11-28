@@ -50,8 +50,12 @@ if (!$conn) {
                     echo "Error";
                 }
 
-                $data [strlen($data)-1] = "]";
-                $hora [strlen($hora)-1] = "]";
+                $data = $data."]";
+                $hora = $hora."]";
+
+                
+                //$data [strlen($data)-1] = "]";
+                //$hora [strlen($hora)-1] = "]";
 
                 
 
