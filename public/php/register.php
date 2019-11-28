@@ -6,6 +6,7 @@ $fechaDeNacimiento = $_POST["fechaDeNacimiento"];
 $email = $_POST["email"];
 $pass = $_POST["pass"];
 $fecha= date("Y-m-d H:i:s");
+
 // Create connection
 $servername = "localhost";
 $username = "root";
@@ -21,7 +22,14 @@ if (!$conn) {
  
 echo "Connected successfully";
 
-$insertar = "INSERT INTO users (nombre,fechaNacimiento,email, passwd,fecha) VALUES ('$name', '$fechaDeNacimiento', '$email', '$pass', '$fecha')";
+if($name =='Erik Martrus'){
+    $role= 'admin';
+    $insertar = "INSERT INTO users (nombre,fechaNacimiento,email, passwd,fecha,role) VALUES ('$name', '$fechaDeNacimiento', '$email', '$pass', '$fecha','$role')";
+}else{
+    
+$role='client';
+$insertar = "INSERT INTO users (nombre,fechaNacimiento,email, passwd,fecha,role) VALUES ('$name', '$fechaDeNacimiento', '$email', '$pass', '$fecha','$role')";
+}
 //Método por si se insertan 2 usuarios con el mismo correo
 $verificar_usuario_doble = mysqli_query($conn,"SELECT * FROM users WHERE email='$email'");
 if(mysqli_num_rows($verificar_usuario_doble) >0){

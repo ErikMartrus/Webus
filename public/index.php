@@ -75,11 +75,10 @@
             <a class="nav-link" href="carrito.php">Carrito</a>
           </li>
         </ul>
-    <?php
-    if(isset($_SESSION["user"])){
-      $nombreUsuario = $_SESSION["user"]["nombre"];
-
-    ?> 
+        <?php
+        if(isset($_SESSION["user"])){    
+          $nombreUsuario = $_SESSION["user"]["nombre"]; 
+        ?>
           <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="FormularioLogin.php"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
@@ -87,11 +86,10 @@
           <li class="nav-item active">
             <a class="nav-link" href="php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
           </li>
-        </ul>
+          </ul>
         <?php
-          }else{
+         }else{
         ?>
-
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
@@ -101,11 +99,9 @@
           </li>
 
         </ul>
-
-      
-      <?php
-      }
-      ?>
+        <?php
+         }
+        ?>
       </div>
     </nav>
   </header>
