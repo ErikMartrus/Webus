@@ -19,7 +19,44 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <?php
+      if(!isset($_SESSION["user"])){
+      ?>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"
+        style="display: flex; justify-content:space-between">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="canales.php">Canales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ayuda.php">Ayuda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.php">Contactos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.php">Productos</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.php">Register</a>
+          </li>
 
+        </ul>
+        </div>
+    </nav>
+  </header>
+      <?php
+      }else{
+        if($_SESSION["user"]["nombre"]=='Erik Martrus'){
+      ?> 
       <div class="collapse navbar-collapse" id="navbarSupportedContent"
         style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
@@ -42,11 +79,35 @@
             <a class="nav-link" href="carrito.php">Carrito</a>
           </li>
         </ul>
-    <?php
-    if(isset($_SESSION["user"])){
-      $nombreUsuario = $_SESSION["user"]["nombre"];
-
-    ?> 
+        <?php
+        
+        }else{
+        
+        ?>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"
+        style="display: flex; justify-content:space-between">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="canales.php">Canales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ayuda.php">Ayuda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.php">Contactos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.php">Productos</a>
+          </li>
+        </ul>
+        <?php
+        }
+        if(isset($_SESSION["user"])){    
+          $nombreUsuario = $_SESSION["user"]["nombre"]; 
+        ?>
           <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="FormularioLogin.php"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
@@ -54,11 +115,10 @@
           <li class="nav-item active">
             <a class="nav-link" href="php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
           </li>
-        </ul>
+          </ul>
         <?php
-          }else{
+         }else{
         ?>
-
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
@@ -68,11 +128,10 @@
           </li>
 
         </ul>
-
-      
-      <?php
-      }
-      ?>
+        <?php
+         }
+        }
+        ?>
       </div>
     </nav>
   </header>
