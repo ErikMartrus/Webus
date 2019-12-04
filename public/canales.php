@@ -56,6 +56,12 @@
           <li class="nav-item">
             <a class="nav-link" href="productos.php">Productos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="social.php">MyIOT Social</a>
+          </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item active">
@@ -92,7 +98,10 @@
             <a class="nav-link" href="productos.php">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">MyIOTShop</a>
+            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="social.php">MyIOT Social</a>
           </li>
         </ul>
         <?php
@@ -116,7 +125,10 @@
             <a class="nav-link" href="contacto.php">Contactos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">MyIOTShop</a>
+            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="social.php">MyIOT Social</a>
           </li>
         </ul>
         <?php

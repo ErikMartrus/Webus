@@ -176,7 +176,7 @@ if (!$conn) {
         <header>
           <div>
           <header>
-                <!-- Meter icono de carrito -->
+               <h1>Productos</h1>
             </header>
         </header>
   </article>
