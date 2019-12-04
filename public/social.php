@@ -174,7 +174,7 @@ if (!$conn) {
       faucibus diam cras feugiat tristique, aptent primis felis sem praesent magnis sociis leo donec, suscipit
       dictumst sapien massa metus ac porta volutpat.</p>
   </article>
-
+<div class="social">
   <article class="perfil">
         <header>
           <div>
@@ -190,8 +190,23 @@ if (!$conn) {
       </header>
         </header>
   </article>
-  </section>
+  <article class="perfilOpciones">
+        <header>
+          <div>
+        <header>
+          <hgroup>
+            <h1>Opciones</h1>
+          </hgroup> 
+        </header>
+        <header>
+        <?php
+        //include 'php/profile.php';
+    ?>
+      </header>
+        </header>
+  </article>
 </div>
+</section>
   <!-- 10% -->
   <footer id="piePaginaCarrito">
     <p class="text">Footer</p>

@@ -418,3 +418,36 @@ img.producto{
     height: 25%;
     width: 214vh;
 }
+.perfilOpciones{
+    border: 1px solid #1E90FF;
+    text-align: right;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 50%;
+    width: 48%;
+}
+.perfil{
+    border: 1px solid #1E90FF;
+    display:inline-flex;
+    flex-direction: row;
+    margin-right: 20px;
+    text-align: right;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 50%;
+    width: 52%;
+}
+.social{
+    border: 1px solid #1E90FF;
+    display:flex;
+    flex-direction:row;
+    margin-right: 20px;
+    text-align: right;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    
+}
