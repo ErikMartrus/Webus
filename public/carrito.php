@@ -21,7 +21,7 @@ if (!$conn) {
   <meta charset="utf-8">
   <meta name="description" content="This is an HTML5/CSS3 example">
   <meta name="keywords" content="HTML5, CSS3, JavaScript">
-  <title>Carrito</title>
+  <title>MyIOTShop</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/misEstilos.css">
@@ -154,81 +154,40 @@ if (!$conn) {
     </nav>
   </header>
   <!-- 80% -->
-  <form  name="lista" action="carrito.php" method="POST">
-    <div class="contenedor--form">
-      <div class="items--form">
-        <label>Productos</label>
-        <select name="producto">
-        <?php
-        foreach ($productos as $key=> $val){
-            echo "<option value='$key'>$val</option>";
-        }
-        ?>
-        </select>
+  <div class="contenedor">
+
+<section id="main">
+  <article class="articulo">
+    <header>
+      <hgroup>
+        <h1>Bienvenido a la tienda virtual de MywebIOT</h1>
+      </hgroup>
+    </header>
+    <p class="entradaPost">Lorem ipsum dolor sit amet consectetur adipiscing elit, mus sem sociosqu dapibus nisl cum
+      quis gravida, tempor bibendum justo lacus habitasse lacinia. Accumsan integer laoreet sollicitudin facilisis
+      faucibus diam cras feugiat tristique, aptent primis felis sem praesent magnis sociis leo donec, suscipit
+      dictumst sapien massa metus ac porta volutpat. Viverra massa urna vivamus quis nam justo quam cum molestie,
+      nostra conubia accumsan scelerisque consequat rutrum velit. Hac montes rhoncus vestibulum aptent taciti
+      malesuada ultrices dis, phasellus tortor erat molestie dictum netus vulputate habitasse, libero facilisi nulla
+      porttitor facilisis nostra vehicula. </p>
+  </article>
+</section>
+
+  <article class="articulo">
+        <header>
+          <div>
+          <header>
+                <h1>Últimos canales</h1>
+                <!-- Meter icono de carrito -->
+            </header>
+        </header>
+  </article>
+    <aside id="lateral">
+      <div>
+      <p class="infoLateralPost1"></p>
       </div>
-        <div class="items--form">
-        <label>Cantidad</label>
-        <input type="number" name="cantidad" value="1">
-        </div>
-        <div class="items--form">
-        <input class="btn--add" type="submit" value="Añadir al Carrito">
-        </div>
-    </div>
-    </form>
-<?php
-    if(isset($_POST['producto'])){
-        if(isset($_POST['cantidad'])){
-            //Añadir producto al carrito
-            if(isset($_SESSION['carrito'][$_POST['producto']]))
-                $_SESSION['carrito'][$_POST['producto']] += $_POST['cantidad'];
-            else
-                $_SESSION['carrito'][$_POST['producto']] = $_POST['cantidad']; 
-            }elseif (isset($_POST['Eliminar'])) {
-                //Eliminar producto
-                unset($_SESSION['carrito'][$_POST['producto']]);
-
-            }  
-        }
-        elseif (isset($_POST['Vaciar'])) {
-            unset($_SESSION['carrito']);
-        }
-        if(!isset($_SESSION['carrito'])){
-            //Crear carrito
-            $_SESSION['carrito'] = array();
-            echo "El carrito esta vacío";
-        }
-        elseif (isset($_SESSION['carrito']) && count($_SESSION['carrito'])>0) {
-            //Mostrar carrito
-            echo "El carrito tiene ".count($_SESSION['carrito'])." productos<br>";
-            echo "<table><tr><th>Producto</th><th>Cantidad</th><th></th></tr>";
-            foreach ($_SESSION['carrito'] as $key => $value) {
-                echo "<tr><td>$productos[$key]";
-                echo "</td><td>$value</td>";
-                echo "<td><form method='POST' action='carrito.php'>";
-                echo "<input type='hidden' name='producto' value='$key'>";
-                echo "<input type='submit' name='Eliminar' value='Eliminar'>";
-                echo "</form></td></tr>";
-                
-            }
-            echo "</table>";
-
-        //Boton Vaciar Carrito
-        echo "<hr><form method='POST' action='carrito.php'>";
-        echo "<input type='submit' name='Vaciar' value='Vaciar Carrito'>";
-        echo "</form>";
-
-        //Boton Checkout
-        echo "<hr><form method='POST' action='chechout.php'>";
-        echo "<input type='submit' name='Checkout' value='Checkout Carrito'>";
-        echo "</form>";
-
-
-        
-        
-    }
-?>
-
-
+    </aside>
+</div>
   <!-- 10% -->
   <footer id="piePaginaCarrito">
     <p class="text">Footer</p>
