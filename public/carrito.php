@@ -177,7 +177,6 @@ if (!$conn) {
         <header>
           <div>
           <header>
-                <h1>Últimos canales</h1>
                 <!-- Meter icono de carrito -->
             </header>
         </header>
