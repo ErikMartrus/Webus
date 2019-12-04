@@ -175,9 +175,16 @@ if (!$conn) {
   <article class="articuloCompra">
         <header>
           <div>
-          <header>
-               <h1>Productos</h1>
-            </header>
+        <header>
+          <hgroup>
+            <h3>Listado de todos los productos</h3>
+          </hgroup> 
+        </header>
+        <header>
+      <?php
+        include 'php/productosCard.php';
+    ?>
+      </header>
         </header>
   </article>
   </section>

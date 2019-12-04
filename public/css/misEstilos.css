@@ -388,3 +388,16 @@ select{
 img.carro{
     margin:20px;
 }
+img.producto{
+    width: 80px;
+    height: auto;
+}
+.card {
+    margin: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.container{
+    margin-top: 20px;
+}

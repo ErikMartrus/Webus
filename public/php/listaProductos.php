@@ -33,13 +33,13 @@ if(!isset($_SESSION["user"])){
         echo mysqli_error($connection);
     }
 
-    //petición sql para buscar los canales
+    //petición sql para buscar los prodcutoos
     $sql = "SELECT * from productos";
 
     if($result = mysqli_query($conn, $sql)){
         //comprobar que el email está en la BD
         if(mysqli_num_rows($result)){
-            //Lista de canales
+            //Lista de productos
             while($row = mysqli_fetch_assoc($result)){
                 $idProducto = $row['id'];
                 $nombreProducto = $row['nombre'];
