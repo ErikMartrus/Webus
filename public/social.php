@@ -25,16 +25,6 @@ if (!$conn) {
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/misEstilos.css">
-  <script> 
-    function borrar(dato){
-        alert(dato);
-        $.post("php/borrarProducto.php", {id: dato}, function(data){
-          alert(data);
-        }); 
-        
-    }
-    
-  </script>
 </head>
 
 <body>
@@ -173,46 +163,31 @@ if (!$conn) {
   <div class="contenedor">
 
 <section id="main">
-  <article class="articulo">
+  <article class="articuloPerfil">
     <header>
       <hgroup>
-        <h1>Bienvenido a la tienda virtual de MywebIOT</h1>
+        <h1>Bienvenido a la red social de MywebIOT</h1>
       </hgroup>
     </header>
     <p class="entradaPost">Lorem ipsum dolor sit amet consectetur adipiscing elit, mus sem sociosqu dapibus nisl cum
       quis gravida, tempor bibendum justo lacus habitasse lacinia. Accumsan integer laoreet sollicitudin facilisis
       faucibus diam cras feugiat tristique, aptent primis felis sem praesent magnis sociis leo donec, suscipit
-      dictumst sapien massa metus ac porta volutpat. Viverra massa urna vivamus quis nam justo quam cum molestie,
-      nostra conubia accumsan scelerisque consequat rutrum velit. Hac montes rhoncus vestibulum aptent taciti
-      malesuada ultrices dis, phasellus tortor erat molestie dictum netus vulputate habitasse, libero facilisi nulla
-      porttitor facilisis nostra vehicula. </p>
+      dictumst sapien massa metus ac porta volutpat.</p>
   </article>
 
-  <article class="articuloCompra">
+  <article class="perfil">
         <header>
           <div>
         <header>
           <hgroup>
-            <h1>Listado de todos los productos</h1>
+            <h1>Mi Perfil</h1>
           </hgroup> 
         </header>
         <header>
-      <?php
-        include 'php/productosCard.php';
-    ?>
       </header>
         </header>
   </article>
   </section>
-
-    <aside id="lateralCompra">
-      <div>
-      <img class="carro" src="assets/img/carrito.png" alt="Carrito de compra" width="60" height="50">
-      <div class="enter">
-            <button class="btn btn--iot" type="submit"><a href="paypal.php"><img src="assets/img/PayPal-logo.png" alt="PayPal" width="50" height="35" />Checkout</button></a>
-      </div>
-      </div>
-    </aside>
 </div>
   <!-- 10% -->
   <footer id="piePaginaCarrito">
