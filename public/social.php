@@ -184,6 +184,9 @@ if (!$conn) {
           </hgroup> 
         </header>
         <header>
+        <?php
+        //include 'php/profile.php';
+    ?>
       </header>
         </header>
   </article>

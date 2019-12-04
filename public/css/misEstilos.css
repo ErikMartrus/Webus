@@ -408,3 +408,13 @@ img.producto{
     margin: unset;
     width: 2.5%;
 }
+.articuloPerfil {
+    border: 1px solid #1E90FF;
+    text-align: left;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 25%;
+    width: 214vh;
+}
