@@ -177,7 +177,7 @@ if (!$conn) {
           <div>
         <header>
           <hgroup>
-            <h3>Listado de todos los productos</h3>
+            <h1>Listado de todos los productos</h1>
           </hgroup> 
         </header>
         <header>

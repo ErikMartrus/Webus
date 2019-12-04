@@ -11,9 +11,6 @@ $conn = mysqli_connect($servername, $username, $password, $bdname);
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
 }
- 
-echo "Connected successfully";
-
 //Recibimos los datos del formulario productos.php y los almacenamos en variables.
  //petición sql para buscar los prodcutoos
  $sql = "SELECT * from productos";
@@ -34,12 +31,10 @@ echo "Connected successfully";
 ?>
  <section class="channels-section">
                         <article>
-                            <aside>
                                 <figure>
-                                    <img class="img-borrar"  src="../assets/img/delete-icon.png" onClick="borrar(
+                                    <img class="img-borrarProducto" src="../assets/img/delete-icon.png" onClick="borrar(
                                     <?php echo "$idProducto";?>)">
                                 </figure>
-                            </aside>
                             <?php
                             echo"<div class='card'>
                             <img class='producto' src= $image alt='Producto'>
@@ -51,7 +46,10 @@ echo "Connected successfully";
                             </div>
                           </div>
                         </article>
-    </section>";
+                        <div class='enter'>
+                            <button class='btn btn--iot' type='submit'><a href='paypal.php'>Add to Cart</button></a>
+                        </div>
+                        </section>";
 }
             
 }else{

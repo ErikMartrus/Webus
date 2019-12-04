@@ -359,7 +359,7 @@ select{
 }
 #piePaginaCarrito {
     border: 10px solid #1E90FF;
-    margin-top: 355px;
+    margin-top: 390vh;
     height: 6vh;
     position: relative;
     top: 2px;
@@ -382,7 +382,7 @@ select{
     padding: 20px;
     margin-bottom: 10px;
     margin-top: 10px;
-    height: 40vh;
+    height: 380vh;
     width: 214vh;
 }
 img.carro{
@@ -397,7 +397,14 @@ img.producto{
     text-align: center;
     display: flex;
     flex-direction: row;
+    margin-left: 120px;
+    width:max-content;
 }
 .container{
     margin-top: 20px;
+}
+.img-borrarProducto {
+    display: block;
+    margin: unset;
+    width: 2.5%;
 }
