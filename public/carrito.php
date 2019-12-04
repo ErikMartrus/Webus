@@ -185,6 +185,9 @@ if (!$conn) {
     <aside id="lateralCompra">
       <div>
       <img class="carro" src="assets/img/carrito.png" alt="Carrito de compra" width="60" height="50">
+      <div class="enter">
+            <button class="btn btn--iot" type="submit"><a href="paypal.php"><img src="assets/img/PayPal-logo.png" alt="PayPal" width="50" height="35" />Checkout</button></a>
+      </div>
       </div>
     </aside>
 </div>
