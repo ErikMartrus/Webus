@@ -40,7 +40,7 @@
             <a class="nav-link" href="productos.php">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">Carrito</a>
+            <a class="nav-link" href="carrito.php">MyIOTShop</a>
           </li>
         </ul>
 

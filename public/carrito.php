@@ -94,7 +94,7 @@ if (!$conn) {
             <a class="nav-link" href="productos.php">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">Carrito</a>
+            <a class="nav-link" href="carrito.php">MyIOTShop</a>
           </li>
         </ul>
         <?php
@@ -118,7 +118,7 @@ if (!$conn) {
             <a class="nav-link" href="contacto.php">Contactos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="productos.php">Productos</a>
+            <a class="nav-link" href="carrito.php">MyIOTShop</a>
           </li>
         </ul>
         <?php
