@@ -171,9 +171,8 @@ if (!$conn) {
       malesuada ultrices dis, phasellus tortor erat molestie dictum netus vulputate habitasse, libero facilisi nulla
       porttitor facilisis nostra vehicula. </p>
   </article>
-</section>
 
-  <article class="articulo">
+  <article class="articuloCompra">
         <header>
           <div>
           <header>
@@ -181,9 +180,11 @@ if (!$conn) {
             </header>
         </header>
   </article>
-    <aside id="lateral">
+  </section>
+
+    <aside id="lateralCompra">
       <div>
-      <p class="infoLateralPost1"></p>
+      <img class="carro" src="assets/img/carrito.png" alt="Carrito de compra" width="60" height="50">
       </div>
     </aside>
 </div>

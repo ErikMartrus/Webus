@@ -368,3 +368,23 @@ select{
 .table{
     margin-left: 500px;
 }
+#lateralCompra {
+    width: 100%;
+    float: right;
+    border: 1px solid #1E90FF;
+    margin-top: 10px;
+    height: 40vh;
+}
+.articuloCompra {
+    border: 1px solid #1E90FF;
+    text-align: left;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 40vh;
+    width: 214vh;
+}
+img.carro{
+    margin:20px;
+}
