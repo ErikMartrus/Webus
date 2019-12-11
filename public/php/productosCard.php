@@ -47,7 +47,7 @@ if (!$conn) {
                           </div>
                         </article>
                         <div class='enter'>
-                            <button class='btn btn--iot' type='submit'><a href='articulosCompra.php'>Add to Cart</button></a>
+                            <button class='btn btn--iot' type='submit'><a href='carrito.php'>Add to Cart</button></a>
                         </div>
                         </section>";
 }
