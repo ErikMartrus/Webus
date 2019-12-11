@@ -50,7 +50,7 @@ if (!$conn) {
                         <form method='post' action='carrito.php'>
                         <input type='hidden' name='idproducto' value='$idProducto'>
                         <input type='hidden' name='precio' value='$precio'>
-                        <input type='hidden' name='cantidad' value='$cantidad'>
+                        <input type='hidden' name='cantidad' value='1'>
                         <input type='hidden' name='nombre' value='$nombreProducto'>
                         
                         <div class='contenedor--btn'>
