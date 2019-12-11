@@ -3,6 +3,7 @@
 <?php
 //Arrancamos la sesion del usuario
 session_start();
+$productos=['Basico','Pro','Premium'];
 // Create connection
 $servername = "localhost";
 $username = "root";
@@ -15,6 +16,15 @@ $conn = mysqli_connect($servername, $username, $password, $bdname);
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
 }
+//petición sql para buscar los productos
+$sql = "SELECT * from productos";
+if($result = mysqli_query($conn, $sql)){
+    if(mysqli_num_rows($result)){
+       
+       
+        
+    
+
 ?>
 <head>
   <meta charset="utf-8">
@@ -175,16 +185,10 @@ if (!$conn) {
   <article class="articulo">
     <header>
       <hgroup>
-        <h1>Bienvenido a la tienda virtual de MywebIOT</h1>
+        <h1>Lista de la compra</h1>
       </hgroup>
     </header>
-    <p class="entradaPost">Lorem ipsum dolor sit amet consectetur adipiscing elit, mus sem sociosqu dapibus nisl cum
-      quis gravida, tempor bibendum justo lacus habitasse lacinia. Accumsan integer laoreet sollicitudin facilisis
-      faucibus diam cras feugiat tristique, aptent primis felis sem praesent magnis sociis leo donec, suscipit
-      dictumst sapien massa metus ac porta volutpat. Viverra massa urna vivamus quis nam justo quam cum molestie,
-      nostra conubia accumsan scelerisque consequat rutrum velit. Hac montes rhoncus vestibulum aptent taciti
-      malesuada ultrices dis, phasellus tortor erat molestie dictum netus vulputate habitasse, libero facilisi nulla
-      porttitor facilisis nostra vehicula. </p>
+    <p class="entradaPost">Aquí puede observar los artículos que va a comprar </p>
   </article>
 
   <article class="articuloCompra">
@@ -196,9 +200,34 @@ if (!$conn) {
           </hgroup> 
         </header>
         <header>
-      <?php
-        include 'php/productosCard.php';
-    ?>
+        <form name="lista" method="post" action="ariculosCompra.php">
+            <label>Productos</label>
+                <select>
+                <option value="0">Please Select</option>
+                <?php
+                while($row = mysqli_fetch_assoc($result)){
+                        $idProducto = $row['id'];
+                        $nombreProducto = $row['nombre'];
+                        $descripcion = $row['descripcion'];
+                        $precio = $row['precio'];
+                        $fecha = $row['fecha'];
+                ?>
+                <option value = "<?php echo($row['nombre'])?>" >
+                <?php echo($row['nombre']) ?>
+            </option>
+            <?php
+                }  
+            }
+        }  
+                ?>
+                </select>
+            <br>
+            <label>Cantidad</label>
+                <input type="number" name="cantidad" value="1">
+            <br>
+                 <input type="submit" value="Añadir al Carrito">
+
+        </form>
       </header>
         </header>
   </article>
@@ -208,7 +237,7 @@ if (!$conn) {
       <div>
       <img class="carro" src="assets/img/carrito.png" alt="Carrito de compra" width="60" height="50">
       <div class="enter">
-            <button class="btn btn--iot" type="submit"><a href="articulosCompra.php"><img src="assets/img/PayPal-logo.png" alt="PayPal" width="50" height="35" />Checkout</button></a>
+            <button class="btn btn--iot" type="submit"><a href="paypal.php"><img src="assets/img/PayPal-logo.png" alt="PayPal" width="50" height="35" />Checkout</button></a>
       </div>
       </div>
     </aside>
