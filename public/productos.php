@@ -178,6 +178,14 @@ if (!$conn) {
         <label for="name">Precio en euros €: <span class="required"></span></label>
         <input type="number" name="precio"> 
       </div>
+      <div class="items--form">
+        <label for="name">Cantidad: <span class="required">*</span></label>
+        <input type="number" name="cantidad">
+      </div>
+      <div class="items--form">
+        <label for="name">Url de la  imagen: <span class="required">*</span></label>
+        <input type="url" name="url">
+      </div>
       <div class="enter items--form">
           <a href="misCanales.php"><button type="submit" class="btn btn--iot btn--addProducto">Añadir producto</button></a>
       </div>

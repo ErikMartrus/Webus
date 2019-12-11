@@ -46,6 +46,9 @@ if(!isset($_SESSION["user"])){
                 $descripcion = $row['descripcion'];
                 $precio = $row['precio'];
                 $fecha = $row['fecha'];
+                $url= $row['image'];
+                $cantidad= $row['cantidad'];
+                
 
                 
 

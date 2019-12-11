@@ -3,7 +3,6 @@
 <?php
 //Arrancamos la sesion del usuario
 session_start();
-$productos=['Basico','Pro','Premium'];
 // Create connection
 $servername = "localhost";
 $username = "root";
@@ -200,7 +199,7 @@ if($result = mysqli_query($conn, $sql)){
           </hgroup> 
         </header>
         <header>
-        <form name="lista" method="post" action="ariculosCompra.php">
+        <form name="lista" method="post" action="articulosCompra.php">
             <label>Productos</label>
                 <select>
                 <option value="0">Please Select</option>
@@ -232,6 +231,59 @@ if($result = mysqli_query($conn, $sql)){
         </header>
   </article>
   </section>
+  <?php
+    if (isset($_POST['producto'])) {
+        if  (isset($_POST['cantidad'])) {
+            //Añadir producto al carrito
+            if (isset($_SESSION['carrito'][$_POST['producto']]))
+                $_SESSION['carrito'][$_POST['producto']] += $_POST['cantidad'];
+            else
+                $_SESSION['carrito'][$_POST['producto']] = $_POST['cantidad'];
+        }
+        elseif (isset ($_POST['Eliminar'])) {
+            //Eliminar producto del producto
+            unset ($_SESSION['carrito'][$_POST['producto']]);
+        }
+    }
+    elseif (isset($_POST['Vaciar'])) {
+        unset ($_SESSION['carrito']);
+    }
+
+
+    if (!isset($_SESSION['carrito'])) {
+        //Crear  carrito
+        $_SESSION['carrito'] = array();
+        echo "El carrito está vacío";
+    }
+    elseif (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
+        // Mostrar carrito
+        echo "El carrito tiene ".count($_SESSION['carrito'])." productos<br>";
+        echo "<table><tr><th>Producto</th><th>Cantidad</th><th></th></tr>";
+        foreach ($_SESSION['carrito'] as $key => $valor) {
+            echo "<tr><td>$productos[$key]";
+            echo "</td><td>$valor</td>";
+            echo "<td><form method='post' action='carrito.php'>";
+            echo "<input type='hidden' name='producto' value='$key'>";
+            echo "<input type='submit' name='Eliminar' value='Eliminar'>";
+            echo "</form></td></tr>";
+        }
+        echo "</table>";
+
+        // Botón Vaciar carrito
+        echo "<hr><form method='post' action='carrito.php'>";
+        echo "<input type='submit' name='Vaciar' value='Vaciar Carrito'>";
+        echo "</form>";
+
+        // Botón Chekout carrito
+        echo "<hr><form method='post' action='checkout.php'>";
+        echo "<input type='submit' name='Checkout' value='Checkout'>";
+        echo "</form>";
+
+    }
+?>
+
+</body>
+</html>
 
     <aside id="lateralCompra">
       <div>
