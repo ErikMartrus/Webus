@@ -210,6 +210,7 @@ if (!$conn) {
       <div class="enter">
             <button class="btn btn--iot" type="submit"><a href="articulosCompra.php"><img src="assets/img/PayPal-logo.png" alt="PayPal" width="50" height="35" />Checkout</button></a>
       </div>
+      
       </div>
     </aside>
 </div>

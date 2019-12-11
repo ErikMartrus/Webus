@@ -42,7 +42,7 @@ if (!$resultado) {
     echo mysqli_error($conn);
 } else {
     echo '<script>
-    alert("El usuario ha sido registrado exitosamente")
+    alert("El producto ha sido registrado exitosamente")
     </script>';
     exit;
 }
