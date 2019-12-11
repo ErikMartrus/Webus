@@ -48,8 +48,15 @@ if (!$conn) {
                         </article>
                         <form method='post' action='carrito.php'>
                         <input type='hidden' name='idproducto' value='$idProducto'>
-                        <div class='enter'>
-                            <button class='btn btn--iot' type='submit'>Add to Cart</button>
+                        <div class='contenedor--btn'>
+                            <div class='items-grid'>
+                                <div class='enter'>
+                                    <button class='btn btn--iot' type='submit'>Add to Cart</button>
+                                </div>
+                                <div class='enter'>
+                                    <button class='btn btn--iot' name='eliminar' type='submit'>Eliminar</button>
+                                </div>
+                            </div>
                         </div>
                         </form>
                         </section>";

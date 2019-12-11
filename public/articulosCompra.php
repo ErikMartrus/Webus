@@ -12,10 +12,9 @@ $id= $_POST["idproducto"];
             //Eliminar producto del producto
             unset ($_SESSION['carrito'][$_POST['id']]);
         }
-    }
-    elseif (isset($_POST['Vaciar'])) {
-        unset ($_SESSION['carrito']);
-    }
+    }      unset ($_SESSION['carrito']);
+           echo "El carrito está vacío";
+    
 
     if (!isset($_SESSION['carrito'])) {
         //Crear  carrito
