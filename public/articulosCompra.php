@@ -9,7 +9,7 @@
         }
         elseif (isset ($_POST['Eliminar'])) {
             //Eliminar producto del carrito
-            unset ($_SESSION['carrito'][$_POST['idproducto']]);
+            unset ($_SESSION['carrito']['idProducto']);
         }
     }
     elseif (isset($_POST['Vaciar'])) {

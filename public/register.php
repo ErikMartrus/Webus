@@ -20,6 +20,9 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <?php
+      if(!isset($_SESSION["user"])){
+      ?>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent"
         style="display: flex; justify-content:space-between">
@@ -103,6 +106,29 @@
     </div>
 
   </form>
+  <?php
+      }else{
+
+      
+      ?>
+  <div class="contenedor">
+    <section id="main">
+      <article class="articulo1">
+        <header>
+          <hgroup>
+            <h1>Fallo en el Register</h1>
+          </hgroup>
+        </header>
+        <p class="entradaPost">Usted se encuentra en la página de registro con una cuenta ya iniciada, primero haga logOut para registrar a un nuevo usuario</p>
+          </header>
+      </article>
+    </section>
+  </div>
+  <?php
+      }      
+  ?>
+
+
 
   <footer id="piePagina">
     <p class="text">Footer</p>
