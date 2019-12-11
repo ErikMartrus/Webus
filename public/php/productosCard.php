@@ -26,6 +26,7 @@ if (!$conn) {
              $precio = $row['precio'];
              $fecha = $row['fecha'];
              $image = $row['image'];
+             $cantidad = $row['cantidad'];
          
       
 ?>
@@ -48,6 +49,10 @@ if (!$conn) {
                         </article>
                         <form method='post' action='carrito.php'>
                         <input type='hidden' name='idproducto' value='$idProducto'>
+                        <input type='hidden' name='precio' value='$precio'>
+                        <input type='hidden' name='cantidad' value='$cantidad'>
+                        <input type='hidden' name='nombre' value='$nombreProducto'>
+                        
                         <div class='contenedor--btn'>
                             <div class='items-grid'>
                                 <div class='enter'>

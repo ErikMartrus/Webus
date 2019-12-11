@@ -1,6 +1,5 @@
 <?php
-$id= $_POST["idproducto"];
-    if (isset($id)) {
+    if (isset($_POST['idproducto'])) {
         if  (isset($_POST['cantidad'])) {
             //Añadir producto al carrito
             if (isset($_SESSION['carrito'][$_POST['idproducto']]))
@@ -10,12 +9,11 @@ $id= $_POST["idproducto"];
         }
         elseif (isset ($_POST['Eliminar'])) {
             //Eliminar producto del producto
-            unset ($_SESSION['carrito'][$_POST['id']]);
+            unset ($_SESSION['carrito'][$_POST['idproducto']]);
         }
     }
     elseif (isset($_POST['Vaciar'])) {
         unset ($_SESSION['carrito']);
-           echo "El carrito está vacío";
     }
 
     if (!isset($_SESSION['carrito'])) {
@@ -26,18 +24,13 @@ $id= $_POST["idproducto"];
     elseif (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
         // Mostrar carrito
         echo "<table><tr><th>Cantidad</th></tr>";
-        foreach ($_SESSION['carrito'] as $key => $valor) {
+        foreach ($_SESSION['carrito'] as $id => $valor) {
             echo "<tr><td>$valor</td>";
             echo "<td><form method='post' action='carrito.php'>";
-            echo "<input type='submit' name='Eliminar' value='Eliminar'>";
             echo "</form></td></tr>";
         }
         echo "</table>";
 
-        // Botón Vaciar carrito
-        echo "<hr><form method='post' action='carrito.php'>";
-        echo "<input type='submit' name='Vaciar' value='Vaciar Carrito'>";
-        echo "</form>";
 
 
     }
