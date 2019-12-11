@@ -180,11 +180,11 @@ if (!$conn) {
       </div>
       <div class="items--form">
         <label for="name">Cantidad: <span class="required">*</span></label>
-        <input type="number" name="cantidad">
+        <input type="number" name="cantidad" value="" placeholder="Número de productos">
       </div>
       <div class="items--form">
         <label for="name">Url de la  imagen: <span class="required">*</span></label>
-        <input type="url" name="url">
+        <input type="url" name="url" value="" placeholder="url de la imagen">
       </div>
       <div class="enter items--form">
           <a href="misCanales.php"><button type="submit" class="btn btn--iot btn--addProducto">Añadir producto</button></a>
