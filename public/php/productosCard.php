@@ -54,7 +54,10 @@ if (!$conn) {
                                     <button class='btn btn--iot' type='submit'>Add to Cart</button>
                                 </div>
                                 <div class='enter'>
-                                    <button class='btn btn--iot' name='eliminar' type='submit'>Eliminar</button>
+                                    <button class='btn btn--iot' name='Eliminar' type='submit'>Eliminar</button>
+                                </div>
+                                <div class='enter'>
+                                    <button class='btn btn--iot' name='Vaciar' type='submit'>Vaciar</button>
                                 </div>
                             </div>
                         </div>
