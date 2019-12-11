@@ -46,9 +46,12 @@ if (!$conn) {
                             </div>
                           </div>
                         </article>
+                        <form method='post' action='carrito.php'>
+                        <input type='hidden' name='idproducto' value='$idProducto'>
                         <div class='enter'>
-                            <button class='btn btn--iot' type='submit'><a href='carrito.php'>Add to Cart</button></a>
+                            <button class='btn btn--iot' type='submit'>Add to Cart</button>
                         </div>
+                        </form>
                         </section>";
 }
             

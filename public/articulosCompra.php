@@ -1,12 +1,12 @@
 <?php
-
-    if (isset($_POST['id'])) {
+$id= $_POST["idproducto"];
+    if (isset($id)) {
         if  (isset($_POST['cantidad'])) {
             //Añadir producto al carrito
-            if (isset($_SESSION['carrito'][$_POST['id']]))
-                $_SESSION['carrito'][$_POST['id']] += $_POST['cantidad'];
+            if (isset($_SESSION['carrito'][$_POST['idproducto']]))
+                $_SESSION['carrito'][$_POST['idproducto']] += $_POST['cantidad'];
             else
-                $_SESSION['carrito'][$_POST['id']] = $_POST['cantidad'];
+                $_SESSION['carrito'][$_POST['idproducto']] = $_POST['cantidad'];
         }
         elseif (isset ($_POST['Eliminar'])) {
             //Eliminar producto del producto
@@ -16,7 +16,6 @@
     elseif (isset($_POST['Vaciar'])) {
         unset ($_SESSION['carrito']);
     }
-echo $_SESSION['carrito'][$_POST['id']];
 
     if (!isset($_SESSION['carrito'])) {
         //Crear  carrito
