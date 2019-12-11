@@ -25,9 +25,11 @@ $name= $_POST["name"];
 $description = $_POST["description"];
 $precio = $_POST["precio"];
 $dia = date("Y-m-d H:i:s");
+$url =  $_POST["url"];
+$cantidad = $_POST["cantidad"];
 
 //saber id del usuario
-$insertar = "INSERT INTO productos(nombre,descripcion,precio,fecha) VALUES ('$name','$description','$precio','$dia')";
+$insertar = "INSERT INTO productos(nombre,descripcion,precio,fecha,image,cantidad) VALUES ('$name','$description','$precio','$dia','$url','$cantidad')";
 
 
 //EJECUTAR CONSULTA:

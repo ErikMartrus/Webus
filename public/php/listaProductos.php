@@ -67,7 +67,7 @@ if(!isset($_SESSION["user"])){
                             <p>Descripción: ". $descripcion. "</p>
                             <p>Fecha de creación: ".$fecha."</p>
                             <p>Precio del producto: " . $precio. " €</p>
-                            <p>Stock del producto: " . $cantidad. " €</p>
+                            <p>Stock del producto: " . $cantidad. "</p>
                         </article>
                     </section>";
             }
