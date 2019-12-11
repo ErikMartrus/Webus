@@ -52,20 +52,9 @@ if (!$conn) {
                         <input type='hidden' name='precio' value='$precio'>
                         <input type='hidden' name='cantidad' value='1'>
                         <input type='hidden' name='nombre' value='$nombreProducto'>
-                        
-                        <div class='contenedor--btn'>
-                            <div class='items-grid'>
                                 <div class='enter'>
                                     <button class='btn btn--iot' type='submit'>Add to Cart</button>
                                 </div>
-                                <div class='enter'>
-                                    <button class='btn btn--iot' name='Eliminar' type='submit'>Eliminar</button>
-                                </div>
-                                <div class='enter'>
-                                    <button class='btn btn--iot' name='Vaciar' type='submit'>Vaciar</button>
-                                </div>
-                            </div>
-                        </div>
                         </form>
                         </section>";
 }
