@@ -35,6 +35,7 @@
             <td>
             <form method='post' action='carrito.php'>
                 <input type='submit' name='Eliminar' value='Eliminar'>
+                <input type='hidden' name='idproducto' value='$id'>
             </form>
             </td></tr>
             ";
