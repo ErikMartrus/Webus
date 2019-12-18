@@ -21,7 +21,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <?php
-      if(!isset($_SESSION["user"])){
+      if(isset($_SESSION["user"])){
+        session_destroy();
       ?>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent"
@@ -59,10 +60,14 @@
           </li>
 
         </ul>
-
+        <?php
+     }
+  ?>
       </div>
     </nav>
   </header>
+  
+
   <!-- 80% -->
 
 
@@ -106,30 +111,6 @@
     </div>
 
   </form>
-  <?php
-      }else{
-
-      
-      ?>
-  <div class="contenedor">
-    <section id="main">
-      <article class="articulo1">
-        <header>
-          <hgroup>
-            <h1>Fallo en el Register</h1>
-          </hgroup>
-        </header>
-        <p class="entradaPost">Usted se encuentra en la página de registro con una cuenta ya iniciada, primero haga logOut para registrar a un nuevo usuario</p>
-          </header>
-      </article>
-    </section>
-  </div>
-  <?php
-      }      
-  ?>
-
-
-
   <footer id="piePagina">
     <p class="text">Footer</p>
   </footer>

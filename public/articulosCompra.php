@@ -1,23 +1,22 @@
 <?php
     if (isset($_POST['idproducto'])) {
         if  (isset($_POST['cantidad'])) {
-
-            echo 'paso 1';
             //Añadir producto al carrito
+            echo 'paso 1';
             if (isset($_SESSION['carrito'][$_POST['idproducto']]))
                 $_SESSION['carrito'][$_POST['idproducto']] += $_POST['cantidad'];
             else
                 $_SESSION['carrito'][$_POST['idproducto']] = $_POST['cantidad'];
                 echo 'paso 2';
         }
-        elseif (isset ($_POST['Eliminar'])) {
+        elseif(isset($_POST['Eliminar'])) {
             echo 'paso 3';
             //Eliminar producto del carrito           
             unset ($_SESSION['carrito'][$_POST['idproducto']]);
            
         }
     }
-    elseif (isset($_POST['Vaciar'])) {
+    elseif(isset($_POST['Vaciar'])) {
         unset ($_SESSION['carrito']);
     }
 
