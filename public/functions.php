@@ -60,7 +60,7 @@ function checkTxnid($txnid) {
 	global $db;
 
 	$txnid = $db->real_escape_string($txnid);
-	$results = $db->query('SELECT * FROM `payments` WHERE txnid = \'' . $txnid . '\'');
+	$results = $db->query('SELECT * FROM `pagos` WHERE txnid = \'' . $txnid . '\'');
 
 	return ! $results->num_rows;
 }
@@ -75,7 +75,7 @@ function addPayment($data) {
 	global $db;
 
 	if (is_array($data)) {
-		$stmt = $db->prepare('INSERT INTO `payments` (txnid, payment_amount, payment_status, itemid, createdtime) VALUES(?, ?, ?, ?, ?)');
+		$stmt = $db->prepare('INSERT INTO `pagos` (txnid, cantidad_pago, estado_pago, id_producto, fecha) VALUES(?, ?, ?, ?, ?)');
 		$stmt->bind_param(
 			'sdsss',
 			$data['txn_id'],
