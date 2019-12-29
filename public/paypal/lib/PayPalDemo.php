@@ -53,7 +53,8 @@ class PayPalDemo
     public function add_new_product($id)
     {
         if (isset($_SESSION['cart'][$id])) {
-            $_SESSION['cart'][$id]['quantity']++;
+            $_SESSION['cart'][$id]['cantidad']++;
+            //Mirar esto
             header('location:products.php');
         } else {
             $sql_s = "SELECT * FROM productos 
@@ -63,8 +64,9 @@ class PayPalDemo
                 $row_s = mysqli_fetch_array($query_s);
                 $_SESSION['cart'][$row_s['id']] = array(
                     "product_id"=>$row_s['id'],
-                    "quantity" => 1,
-                    "price" => $row_s['precio'],
+                    "cantidad" => 1,
+                    "precio" => $row_s['precio'],
+                    //Mirar stock, no tenemos en base de datos
                     "stock" => $row_s['stock']
                 );
                 header('location:products.php');
@@ -77,7 +79,7 @@ class PayPalDemo
         $price = 0;
         if (count($_SESSION['cart']) > 0) {
             foreach ($_SESSION['cart'] as $product) {
-                $price += (float)$product['price'] * $product['quantity'];
+                $price += (float)$product['precio'] * $product['cantidad'];
             }
         }
         return round($price, 2);
@@ -130,7 +132,7 @@ class PayPalDemo
     public
     function add_new_order($user_id, $state, $total,$payment_id,$payer_id,$payer_email)
     {
-        $query = "INSERT INTO ordenes(cliente_id, total, estado, fecha) VALUES ('$user_id', '$total','$state' ,CURRENT_TIMESTAMP )";
+        $query = "INSERT INTO orden(payer_id, payment_total, estado, fecha) VALUES ('$user_id', '$total','$state' ,CURRENT_TIMESTAMP )";
         if (!$result = mysqli_query($this->db, $query)) {
             exit(mysqli_error($this->db));
         }
