@@ -7,11 +7,11 @@
   <title>MyIOTShop</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/misEstilos.css">
+  <link rel="stylesheet" href="../css/misEstilos.css">
 </head>
 <header>
 <nav class="cabecera navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.php"><img class="img-Index" src="assets/img/IOT.png" alt="" style="object-fit: cover"></a>
+      <a href="../index.php"><img class="img-Index-Nav" src="../assets/img/IOT.png" alt="" style="object-fit: cover"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

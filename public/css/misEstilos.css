@@ -348,6 +348,10 @@ select{
     width: 41.5px;
     height: 71.5px;
 }
+.img-Index-Nav{
+    width: 55px;
+    height: 45px;
+}
 
 .btn--addProducto {
     display: block;
