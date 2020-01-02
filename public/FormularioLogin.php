@@ -60,7 +60,7 @@ if (!$conn) {
             <a class="nav-link" href="carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="social.php">MyIOT Social</a>
+            <a class="nav-link" href="social/social.php">MyIOT Social</a>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -101,7 +101,7 @@ if (!$conn) {
             <a class="nav-link" href="carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="social.php">MyIOT Social</a>
+            <a class="nav-link" href="social/social.php">MyIOT Social</a>
           </li>
         </ul>
         <?php
@@ -128,7 +128,7 @@ if (!$conn) {
             <a class="nav-link" href="carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="social.php">MyIOT Social</a>
+            <a class="nav-link" href="social/social.php">MyIOT Social</a>
           </li>
         </ul>
         <?php

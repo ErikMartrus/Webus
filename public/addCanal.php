@@ -57,7 +57,7 @@
             <a class="nav-link" href="carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="social.php">MyIOT Social</a>
+            <a class="nav-link" href="social/social.php">MyIOT Social</a>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -98,7 +98,7 @@
             <a class="nav-link" href="carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="social.php">MyIOT Social</a>
+            <a class="nav-link" href="social/social.php">MyIOT Social</a>
           </li>
         </ul>
         <?php
@@ -125,7 +125,7 @@
             <a class="nav-link" href="carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="social.php">MyIOT Social</a>
+            <a class="nav-link" href="social/social.php">MyIOT Social</a>
           </li>
         </ul>
         <?php
