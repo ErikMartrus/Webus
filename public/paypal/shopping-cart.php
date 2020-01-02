@@ -4,7 +4,6 @@ $app = new PayPalDemo();
 if (!empty($_POST['btnAddProduct'])) {
     $product_id = $_POST['product_id'];
     $product = $app->get_product_details($product_id);
-    $app->add_new_product($product_id);
 }
 if (isset($_GET['status']) && $_GET['status'] == FALSE) {
     $message = 'Your payment transaction failed!';

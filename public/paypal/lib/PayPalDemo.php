@@ -50,36 +50,13 @@ class PayPalDemo
         }
         return $data;
     }
-    public function add_new_product($id)
-    {
-        if (isset($_SESSION['cart'][$id])) {
-            $_SESSION['cart'][$id]['cantidad']++;
-            //Mirar esto
-            header('location:products.php');
-        } else {
-            $sql_s = "SELECT * FROM productos 
-                WHERE id={$id}";
-            $query_s = mysqli_query($this->db, $sql_s);
-            if (mysqli_num_rows($query_s) != 0) {
-                $row_s = mysqli_fetch_array($query_s);
-                $_SESSION['cart'][$row_s['id']] = array(
-                    "product_id"=>$row_s['id'],
-                    "cantidad" => 1,
-                    "precio" => $row_s['precio'],
-                    //Mirar stock, no tenemos en base de datos
-                    "stock" => $row_s['stock']
-                );
-                header('location:products.php');
-            }
-        }
-    }
     public
     function _get_sum()
     {
         $price = 0;
         if (count($_SESSION['cart']) > 0) {
             foreach ($_SESSION['cart'] as $product) {
-                $price += (float)$product['precio'] * $product['cantidad'];
+                $price += (float)$product['price'] * $product['quantity'];
             }
         }
         return round($price, 2);
@@ -132,7 +109,7 @@ class PayPalDemo
     public
     function add_new_order($user_id, $state, $total,$payment_id,$payer_id,$payer_email)
     {
-        $query = "INSERT INTO orden(payer_id, payment_total, estado, fecha) VALUES ('$user_id', '$total','$state' ,CURRENT_TIMESTAMP )";
+        $query = "INSERT INTO orden(id_cliente, fecha, total, estado) VALUES ('$user_id', CURRENT_TIMESTAMP, '$total','$state')";
         if (!$result = mysqli_query($this->db, $query)) {
             exit(mysqli_error($this->db));
         }
@@ -146,7 +123,7 @@ class PayPalDemo
         $cart = $_SESSION['cart'];
         if (count($cart) > 0) {
             foreach ($cart as $product) {
-                $query = "INSERT INTO ordenes_detalle(producto_id, orden_id, cantidad) VALUES ('{$product['product_id']}', '$order_id','{$product['quantity']}')";
+                $query = "INSERT INTO detalleorden(producto_id, orden_id, cantidad) VALUES ('{$product['product_id']}', '$order_id','{$product['quantity']}')";
                 if (!$result = mysqli_query($this->db, $query)) {
                     exit(mysqli_error($this->db));
                 }
@@ -172,7 +149,7 @@ class PayPalDemo
     function getOrders($user_id)
     {
         $data = [];
-        $query = "SELECT * FROM ordenes WHERE cliente_id = '$user_id' ORDER BY id DESC";
+        $query = "SELECT * FROM orden WHERE cliente_id = '$user_id' ORDER BY id DESC";
         if (!$result = mysqli_query($this->db, $query)) {
             exit(mysqli_error($this->db));
         }
@@ -187,7 +164,7 @@ class PayPalDemo
     function getAllOrders()
     {
         $data = [];
-        $query = "SELECT * FROM ordenes ORDER BY id DESC";
+        $query = "SELECT * FROM orden ORDER BY id DESC";
         if (!$result = mysqli_query($this->db, $query)) {
             exit(mysqli_error($this->db));
         }
@@ -235,7 +212,7 @@ class PayPalDemo
     function getOrderItems($order_id)
     {
         $data = [];
-        $query = "SELECT P.id, P.nombre, P.precio, OI.cantidad FROM ordenes_detalle OI
+        $query = "SELECT P.id, P.nombre, P.precio, OI.cantidad FROM detalleorden OI
   LEFT JOIN productos P 
   ON P.id = OI.producto_id
     WHERE OI.orden_id = '$order_id'";
