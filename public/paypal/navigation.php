@@ -1,21 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-//Arrancamos la sesion del usuario
-session_start();
-// Create connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$bdname = "laboratorio";
-
-$conn = mysqli_connect($servername, $username, $password, $bdname);
-// Check connection
-
-if (!$conn) {
-      die("Connection failed: " . mysqli_connect_error());
-}
-?>
 <head>
   <meta charset="utf-8">
   <meta name="description" content="This is an HTML5/CSS3 example">
@@ -24,23 +8,9 @@ if (!$conn) {
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/misEstilos.css">
-  <script> 
-    function borrar(dato){
-        alert(dato);
-        $.post("php/borrarProducto.php", {id: dato}, function(data){
-          alert(data);
-        }); 
-        
-    }
-    
-  </script>
 </head>
-
-<body>
-  <!-- 10% -->
-
-  <header>
-    <nav class="cabecera navbar navbar-expand-lg navbar-light bg-light">
+<header>
+<nav class="cabecera navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="index.php"><img class="img-Index" src="assets/img/IOT.png" alt="" style="object-fit: cover"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,6 +37,12 @@ if (!$conn) {
           <li class="nav-item">
             <a class="nav-link" href="productos.php">Productos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="social.php">MyIOT Social</a>
+          </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item active">
@@ -79,7 +55,7 @@ if (!$conn) {
         </ul>
         </div>
     </nav>
-  </header>
+</header>
       <?php
       }else{
         if($_SESSION["user"]["nombre"]=='Erik Martrus'){
@@ -103,7 +79,7 @@ if (!$conn) {
             <a class="nav-link" href="productos.php">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">MyIOTShop</a>
+            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="social.php">MyIOT Social</a>
@@ -130,7 +106,7 @@ if (!$conn) {
             <a class="nav-link" href="contacto.php">Contactos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">MyIOTShop</a>
+            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="social.php">MyIOT Social</a>
@@ -167,66 +143,3 @@ if (!$conn) {
         ?>
       </div>
     </nav>
-  </header>
-  <!-- 80% -->
-  <div class="contenedor">
-
-<section id="main">
-  <article class="articulo">
-    <header>
-      <hgroup>
-        <h1>Bienvenido a la tienda virtual de MywebIOT</h1>
-      </hgroup>
-    </header>
-    <p class="entradaPost">Lorem ipsum dolor sit amet consectetur adipiscing elit, mus sem sociosqu dapibus nisl cum
-      quis gravida, tempor bibendum justo lacus habitasse lacinia. Accumsan integer laoreet sollicitudin facilisis
-      faucibus diam cras feugiat tristique, aptent primis felis sem praesent magnis sociis leo donec, suscipit
-      dictumst sapien massa metus ac porta volutpat. Viverra massa urna vivamus quis nam justo quam cum molestie,
-      nostra conubia accumsan scelerisque consequat rutrum velit. Hac montes rhoncus vestibulum aptent taciti
-      malesuada ultrices dis, phasellus tortor erat molestie dictum netus vulputate habitasse, libero facilisi nulla
-      porttitor facilisis nostra vehicula. </p>
-  </article>
-
-  <article class="articuloCompra">
-        <header>
-          <div>
-        <header>
-          <hgroup>
-            <h1>Listado de todos los productos</h1>
-          </hgroup> 
-        </header>
-        <header>
-      <?php
-        include 'php/productosCard.php';
-    ?>
-      </header>
-        </header>
-  </article>
-  </section>
-
-    <aside id="lateralCompra">
-      <div>
-      <a href="paypal/shopping-cart.php"><img class="carro"  src="assets/img/carrito.png" alt="Carrito de compra" width="60" height="50"></a>
-      </div>
-      <?php
-      //Boton de Paypal
-         echo "<div class='enter'>";
-         echo "<button class='btn btn--iot' type='submit'><a href='paypal/shopping-cart.php'><img src='assets/img/PayPal-logo.png' alt='PayPal' width='50' height='35' />Ir a Compra</button></a>";
-         echo "</div>";
-         ?>
-    </aside>
-</div>
-  <!-- 10% -->
-  <footer id="piePaginaCarrito">
-    <p class="text">Footer</p>
-  </footer>
-
-
-</body>
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-</html>
