@@ -179,8 +179,8 @@ if (!$conn) {
         <input type="number" name="precio"> 
       </div>
       <div class="items--form">
-        <label for="name">Cantidad: <span class="required">*</span></label>
-        <input type="number" name="cantidad" value="" placeholder="Número de productos">
+        <label for="name">Stock: <span class="required">*</span></label>
+        <input type="number" name="stock" value="" placeholder="Número de productos">
       </div>
       <div class="items--form">
         <label for="name">Url de la  imagen: <span class="required">*</span></label>

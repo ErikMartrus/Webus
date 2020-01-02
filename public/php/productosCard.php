@@ -26,7 +26,7 @@ if (!$conn) {
              $precio = $row['precio'];
              $fecha = $row['fecha'];
              $image = $row['image'];
-             $cantidad = $row['cantidad'];
+             $stock = $row['stock'];
          
       
 ?>
@@ -50,7 +50,7 @@ if (!$conn) {
                         <form method='post' action='carrito.php'>
                         <input type='hidden' name='idproducto' value='$idProducto'>
                         <input type='hidden' name='precio' value='$precio'>
-                        <input type='hidden' name='cantidad' value='1'>
+                        <input type='hidden' name='stock' value='1'>
                         <input type='hidden' name='nombre' value='$nombreProducto'>
                                 <div class='enter'>
                                     <button class='btn btn--iot' type='submit'>Add to Cart</button>
