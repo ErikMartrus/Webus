@@ -64,25 +64,13 @@
         style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="../index.php">MywebIOT <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="products.php">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../canales.php">Canales</a>
+            <a class="nav-link" href="shopping-cart.php">My Shopping Cart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../ayuda.php">Ayuda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../contacto.php">Contactos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../productos.php">Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../carrito.php">MyIOT Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../social.php">MyIOT Social</a>
+            <a  class="nav-link" href="my-orders.php">My Orders</a>
           </li>
         </ul>
         <?php
@@ -93,23 +81,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent"
         style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="../index.php">MywebIOT <span class="sr-only">(current)</span></a>
+        <li class="nav-item active">
+            <a class="nav-link" href="products.php">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../canales.php">Canales</a>
+            <a class="nav-link" href="shopping-cart.php">My Shopping Cart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../ayuda.php">Ayuda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../contacto.php">Contactos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../carrito.php">MyIOT Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../social.php">MyIOT Social</a>
+            <a  class="nav-link" href="my-orders.php">My Orders</a>
           </li>
         </ul>
         <?php
@@ -121,9 +100,7 @@
           <li class="nav-item active">
             <a class="nav-link" href="../FormularioLogin.php"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="../php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="logout.php?action=true">Logout</a></li>
           </ul>
         <?php
          }else{

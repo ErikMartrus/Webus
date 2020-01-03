@@ -26,14 +26,15 @@ $posicion = 0;
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Práctica</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/stylesPayPal.css">
+<meta charset="utf-8">
+  <meta name="description" content="This is an HTML5/CSS3 example">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript">
+  <title>Plataforma de Compra para IOT</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/misEstilos.css">
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
 
