@@ -19,8 +19,6 @@
       <?php
       if(!isset($_SESSION["user"])){
       ?>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent"
-        style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="../index.php">MywebIOT <span class="sr-only">(current)</span></a>
@@ -60,8 +58,6 @@
       }else{
         if($_SESSION["user"]["nombre"]=='Erik Martrus'){
       ?> 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent"
-        style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="products.php">Products</a>
@@ -78,8 +74,6 @@
         }else{
         
         ?>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent"
-        style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
             <a class="nav-link" href="products.php">Products</a>
