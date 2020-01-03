@@ -123,12 +123,12 @@ class PayPalDemo
         $cart = $_SESSION['cart'];
         if (count($cart) > 0) {
             foreach ($cart as $product) {
-                $query = "INSERT INTO detalleorden(id_orden, id_producto, cantidad) VALUES ('$order_id', '{$product['id_producto']}', '{$product['cantidad']}')";
+                $query = "INSERT INTO detalleorden(id_orden, id_producto, cantidad) VALUES ('$order_id', '{$product['product_id']}', '{$product['cantidad']}')";
                 if (!$result = mysqli_query($this->db, $query)) {
                     exit(mysqli_error($this->db));
                 }
                 $nuevoStock = $product['stock']-$product['cantidad'];
-                $product_id = $product['id_producto'];
+                $product_id = $product['product_id'];
                 $query = "UPDATE productos SET stock = $nuevoStock where id=$product_id ";
                 if (!$result = mysqli_query($this->db, $query)) {
                     exit(mysqli_error($this->db));
