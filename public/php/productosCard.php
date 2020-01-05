@@ -54,7 +54,7 @@ if (!$conn) {
                         <input type='hidden' name='stock' value='1'>
                         <input type='hidden' name='nombre' value='$nombreProducto'>
                                 <div class='enter'>
-                                    <button class='btn btn--iot' type='submit'>Add to Cart</button>
+                                    <button class='btn btn--iot' type='submit'><a href='paypal/mostrarCarrito.php'>Add to Cart</button></a>
                                 </div>
                         </form>
                         </section>";

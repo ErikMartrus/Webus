@@ -23,7 +23,6 @@ if (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
         $cantidadProducto = $valor;
 
         $sql = "SELECT * FROM productos WHERE id = '$idProducto'";
-
         if ($result = mysqli_query($connection, $sql)) {
             while ($row = mysqli_fetch_array($result)) {
                 $nombreProducto = $row["nombre"];
@@ -34,12 +33,12 @@ if (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
 
                 $precioTotal = $cantidadProducto * $precioProducto;
 
-                echo "<a href=\"./scripts/deleteFromCart.php?id=" . $idProducto . "\" class='btn btn-danger float-right deleteButton'></a>";
-                echo "<article class='canales_article'>";
-                echo "<p id='paragraph_canales'>Nombre del producto: $nombreProducto </p>";
-                echo "<p id='paragraph_canales'>Cantidad: $cantidadProducto </p>";
-                echo "<p id='paragraph_canales'>Precio unitario: $precioProducto €</p>";
-                echo "<p id='paragraph_canales'>Precio total: $precioTotal €</p>";
+                echo "<a href=\"deleteFromCart.php?id=" . $idProducto . "\" class='btn btn--iot'></a>";
+                echo "<article class='articulo'>";
+                echo "<p>Nombre del producto: $nombreProducto </p>";
+                echo "<p>Cantidad: $cantidadProducto </p>";
+                echo "<p>Precio unitario: $precioProducto €</p>";
+                echo "<p>Precio total: $precioTotal €</p>";
                 echo "</article>";
             }
         }
