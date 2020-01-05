@@ -44,6 +44,7 @@ if (!$conn) {
                                 <p>Descripción del producto: ". $descripcion. "</p>
                                 <p>Fecha de creación: ".$fecha."</p>
                                 <p>Precio del producto: " . $precio. " €</p>
+                                <p>Productos Restantes: " . $stock. "</p>
                             </div>
                           </div>
                         </article>

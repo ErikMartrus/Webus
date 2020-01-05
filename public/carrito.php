@@ -206,7 +206,7 @@ if (!$conn) {
 
     <aside id="lateralCompra">
       <div>
-      <a href="paypal/shopping-cart.php"><img class="carro"  src="assets/img/carrito.png" alt="Carrito de compra" width="60" height="50"></a>
+      <a href="paypal/mostrarCarrito.php"><img class="carro"  src="assets/img/carrito.png" alt="Carrito de compra" width="60" height="50"></a>
       </div>
       <?php
       //Boton de Paypal
