@@ -33,10 +33,10 @@ $dbConfig = [
 // PayPal settings. Change these to your account details and the relevant URLs
 // for your site.
 $paypalConfig = [
-    'email' => 'sb-kxrr320113@business.example.com',
-    'return_url' => 'http://localhost/proyectos-clase/laboratorioweb/scripts/payments.php',
-    'cancel_url' => 'http://localhost/proyectos-clase/laboratorioweb/tienda.php',
-    'notify_url' => 'http://localhost/proyectos-clase/laboratorioweb/scripts/payments.php' // PARA IPN SOLO
+    'email' => 'sb-trsds802190@business.example.com',
+    'return_url' => 'http://localhost/paypal/payments.php',
+    'cancel_url' => 'http://localhost/paypal/carrito.php',
+    'notify_url' => 'http://localhost/paypal/payments.php' // PARA IPN SOLO
 ];
 
 $paypalUrl = $enableSandbox ? 'https://www.sandbox.paypal.com/cgi-bin/webscr' : 'https://www.paypal.com/cgi-bin/webscr';
