@@ -80,7 +80,7 @@ elseif (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
      echo "</form>";
      //Boton de Paypal
      echo "<div class='enter'>";
-     echo "<button class='btn btn--iot' type='submit'><a href='paypal.php'><img src='assets/img/PayPal-logo.png' alt='PayPal' width='50' height='35' />Checkout</button></a>";
+     echo "<button class='btn btn--iot' type='submit'><a href='payments.php'><img src='assets/img/PayPal-logo.png' alt='PayPal' width='50' height='35' />Checkout</button></a>";
      echo "</div>";
      
 }
