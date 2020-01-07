@@ -1,49 +1,87 @@
 <?php
-
-// 1. Comprobamos que el carrito está creado 
-if (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
-
-    $host = "localhost";
-    $database = "laboratorio";
-    $user = "root";
-    $databasePassword = "";
-
-    $connection = mysqli_connect($host, $user, $databasePassword, $database);
-
-    echo "<h1 id='canales_heading'>Carrito</h1>";
-
-    foreach ($_SESSION['carrito'] as $key => $valor) {
-
-        $nombreProducto = "";
-        $descripcionProducto = "";
-        $precioProducto = "";
-        $fechaProducto = "";
-
-        $idProducto = $key;
-        $cantidadProducto = $valor;
-
-        $sql = "SELECT * FROM productos WHERE id = '$idProducto'";
-        if ($result = mysqli_query($connection, $sql)) {
-            while ($row = mysqli_fetch_array($result)) {
-                $nombreProducto = $row["nombre"];
-                $descripcionProducto = $row["descripcion"];
-                $precioProducto = $row["precio"];
-                $fechaProducto = $row["fecha"];
-                $idProducto = $row["id"];
-
-                $precioTotal = $cantidadProducto * $precioProducto;
-
-                echo "<a href=\"deleteFromCart.php?id=" . $idProducto . "\" class='btn btn--iot'></a>";
-                echo "<article class='articulo'>";
-                echo "<p>Nombre del producto: $nombreProducto </p>";
-                echo "<p>Cantidad: $cantidadProducto </p>";
-                echo "<p>Precio unitario: $precioProducto €</p>";
-                echo "<p>Precio total: $precioTotal €</p>";
-                echo "</article>";
-            }
-        }
+  if (isset($_POST['idproducto'])) {
+    if  (isset($_POST['cantidad'])) {
+        //Añadir producto al carrito
+        if (isset($_SESSION['carrito'][$_POST['idproducto']]))
+            $_SESSION['carrito'][$_POST['idproducto']] += $_POST['cantidad'];
+        else
+            $_SESSION['carrito'][$_POST['idproducto']] = $_POST['cantidad'];
     }
-    mysqli_close($connection);
-} else {
-    echo "<h1 id='canales_heading'>Carrito Vacío</h1>";
+    elseif(isset($_POST['Eliminar'])) {
+        //Eliminar producto del carrito           
+        unset ($_SESSION['carrito'][$_POST['idproducto']]);
+       
+    }
 }
+elseif(isset($_POST['Vaciar'])) {
+    unset ($_SESSION['carrito']);
+}
+
+if (!isset($_SESSION['carrito'])) {
+    //Crear  carrito
+    $_SESSION['carrito']=array();
+    echo "El carrito está vacío";
+}
+elseif (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
+    // Mostramos carrito
+    $precioTotal=0;
+    foreach ($_SESSION['carrito'] as $id => $valor) {
+    echo "El carrito tiene ".count($_SESSION['carrito'])." productos<br>";
+    echo "<table>
+    <tr><th>Cantidad</th>
+    <th>Precio Total: </th></tr>";
+    // Create connection
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $bdname = "laboratorio";
+
+    $conn = mysqli_connect($servername, $username, $password, $bdname);
+    // Check connection
+
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    
+    }
+    $sql="SELECT * from productos WHERE id='$id'";
+    if($result = mysqli_query($conn, $sql)){
+        //comprobar que el email está en la BD
+        if(mysqli_num_rows($result)){
+            //Lista de productos
+            while($row = mysqli_fetch_assoc($result)){
+                $nombreProducto = $row['nombre'];
+                $precio = $row['precio'];
+                $stock = $row['stock'];
+                $precioTotal=$valor * $precio;
+                if($stock<$valor){
+                    echo "No hay suficientes productos en stock";
+                }else{
+                    echo "
+                    <td>$valor</td>
+                    <td>$precio</td>
+                    <td>
+                    <form method='post' action='carrito.php'>
+                        <input type='submit' name='Eliminar' value='Eliminar'>
+                        <input type='hidden' name='idproducto' value='$id'>
+                    </form>
+                    </td></tr>
+                    ";  
+                }
+            }
+        } 
+    }
+}
+    echo "</table>";
+    echo "$precioTotal";
+
+     // Botón Vaciar carrito
+     echo "<form method='post' action='carrito.php'>";
+     echo "<input type='submit' name='Vaciar' value='Vaciar Carrito'>";
+     echo "</form>";
+     //Boton de Paypal
+     echo "<div class='enter'>";
+     echo "<button class='btn btn--iot' type='submit'><a href='paypal.php'><img src='assets/img/PayPal-logo.png' alt='PayPal' width='50' height='35' />Checkout</button></a>";
+     echo "</div>";
+     
+}
+?>

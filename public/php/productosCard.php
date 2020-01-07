@@ -48,13 +48,14 @@ if (!$conn) {
                             </div>
                           </div>
                         </article>
-                        <form method='post' action='carrito.php'>
+                        <form method='POST' action='carrito.php'>
                         <input type='hidden' name='idproducto' value='$idProducto'>
                         <input type='hidden' name='precio' value='$precio'>
-                        <input type='hidden' name='stock' value='1'>
+                        <input type='hidden' name='cantidad' value='1'>
                         <input type='hidden' name='nombre' value='$nombreProducto'>
+                        <input type='hidden' name='stock' value='$stock'>
                                 <div class='enter'>
-                                    <button class='btn btn--iot' type='submit'><a href='paypal/mostrarCarrito.php'>Add to Cart</button></a>
+                                    <button class='btn btn--iot' type='submit'><a href='../carrito.php'>Add to Cart</button></a>
                                 </div>
                         </form>
                         </section>";

@@ -205,15 +205,9 @@ if (!$conn) {
   </section>
 
     <aside id="lateralCompra">
-      <div>
-      <a href="paypal/mostrarCarrito.php"><img class="carro"  src="assets/img/carrito.png" alt="Carrito de compra" width="60" height="50"></a>
-      </div>
-      <?php
-      //Boton de Paypal
-         echo "<div class='enter'>";
-         echo "<button class='btn btn--iot' type='submit'><a href='paypal/shopping-cart.php'><img src='assets/img/PayPal-logo.png' alt='PayPal' width='50' height='35' />Ir a Compra</button></a>";
-         echo "</div>";
-         ?>
+         <?php
+            include("paypal/mostrarCarrito.php");
+        ?>
     </aside>
 </div>
   <!-- 10% -->
