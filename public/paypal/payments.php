@@ -50,27 +50,14 @@ $databasePassword = "";
 
 $connection = mysqli_connect($host, $user, $databasePassword, $database);
 
-$totalAPagar = 0;
 
-foreach ($_SESSION['carrito'] as $key => $valor) {
-
-    $idProducto = $key;
-    $cantidadProducto = $valor;
-
-    $sql = "SELECT * FROM productos WHERE id = '$idProducto'";
-
-    if ($result = mysqli_query($connection, $sql)) {
-        while ($row = mysqli_fetch_array($result)) {
-            $precioProducto = $row["precio"];
-
-            $totalAPagar = $totalAPagar + ($cantidadProducto * $precioProducto);
-        }
-    }
+if (!$connection) {
+      die("Connection failed: " . mysqli_connect_error());
 }
 
 // Product being purchased.
-$itemName = "Compra MyIoT";
-$itemAmount = $totalAPagar;
+$itemName = "Compra Web Erik MyIOT";
+$itemAmount = $precioTotal;
 
 // Include Functions
 require 'functions.php';
@@ -86,7 +73,7 @@ if (!empty($_GET['tx']) && !empty($_GET['amt']) && !empty($_GET['cc']) && !empty
         'cc' => $_GET['cc'],
         'st' => $_GET['st'],
         'fecha' => date("Y-m-d H:i:s", $_SERVER["REQUEST_TIME"]),
-        'userID' => $_SESSION["userID"]
+        'userID' => $_SESSION["user"]
     ];
 
     addPaymentToDatabse($data);

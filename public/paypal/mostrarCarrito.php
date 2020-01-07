@@ -52,7 +52,7 @@ elseif (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
                 $nombreProducto = $row['nombre'];
                 $precio = $row['precio'];
                 $stock = $row['stock'];
-                $precioTotal= $precioTotal + $valor * $precio;
+                $precioTotal= $precioTotal + ($valor * $precio);
                 if($stock<$valor){
                     echo "No hay suficientes productos en stock";
                 }else{
@@ -80,7 +80,11 @@ elseif (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
      echo "</form>";
      //Boton de Paypal
      echo "<div class='enter'>";
-     echo "<button class='btn btn--iot' type='submit'><a href='payments.php'><img src='assets/img/PayPal-logo.png' alt='PayPal' width='50' height='35' />Checkout</button></a>";
+     echo"<form method='POST' action='paypal/payments.php'>
+     <input type='hidden' name='nombre' value='$nombreProducto'>
+     <input type='hidden' name='precioTotal' value='$precioTotal'>
+     <input type='hidden' name='stock' value='$stock'>";
+     echo "<button class='btn btn--iot' type='submit'><a href='paypal/payments.php'><img src='assets/img/PayPal-logo.png' alt='PayPal' width='50' height='35' />Checkout</button></a>";
      echo "</div>";
      
 }
