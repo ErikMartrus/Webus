@@ -25,11 +25,11 @@ if (!isset($_SESSION['carrito'])) {
 elseif (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
     // Mostramos carrito
     $precioTotal=0;
-    foreach ($_SESSION['carrito'] as $id => $valor) {
     echo "El carrito tiene ".count($_SESSION['carrito'])." productos<br>";
     echo "<table>
     <tr><th>Cantidad</th>
-    <th>Precio Total: </th></tr>";
+    <th>Precio por Producto: </th></tr>";
+    foreach ($_SESSION['carrito'] as $id => $valor) {
     // Create connection
     $servername = "localhost";
     $username = "root";
@@ -52,7 +52,7 @@ elseif (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
                 $nombreProducto = $row['nombre'];
                 $precio = $row['precio'];
                 $stock = $row['stock'];
-                $precioTotal=$valor * $precio;
+                $precioTotal= $precioTotal + $valor * $precio;
                 if($stock<$valor){
                     echo "No hay suficientes productos en stock";
                 }else{
@@ -72,7 +72,7 @@ elseif (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
     }
 }
     echo "</table>";
-    echo "$precioTotal";
+    echo "El total de la compra es: $precioTotal";
 
      // Botón Vaciar carrito
      echo "<form method='post' action='carrito.php'>";
