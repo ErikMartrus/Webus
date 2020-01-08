@@ -14,7 +14,7 @@ if (mysqli_connect_error()) {
 
 
 $idUsuarioLogeado = $_SESSION["user"]["id"];
-$nombreUsuarioLíder= $_SESSION["user"]["nombre"];
+$nombreUsuarioLider= $_SESSION["user"]["nombre"];
 
 $sqlAmigos = "SELECT * FROM grupos";
 
@@ -28,9 +28,9 @@ if ($result2 = mysqli_query($connection, $sqlAmigos)) {
         if ($result4 = mysqli_query($connection, $sqlNombreAmigo)) {
             while ($row4 = mysqli_fetch_array($result4)) {
                 $nombreMiembroGrupo = $row4['nombre'];
-                $idMiembroGrupo = $row4['id'];
+                $idPersona = $row4['id'];
 
-                echo "<p>nombreMiembroGrupo: " . $nombreMiembroGrupo. "</p>";
+                echo "<option value='$idPersona|$idPersona'>Grupo de: $nombreUsuarioLider</option>";
             }
         }
     }

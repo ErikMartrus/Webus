@@ -15,6 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $emisor = $_SESSION["user"]["id"];
         $destinatario = $_POST[$destinatarioIDInput];
+        $destinatarios = explode('|', $destinatario);
+        $destinatario1= $result_explode[0];
+        $destinatario2= $result_explode[1];;
         $message = $_POST[$messageIDInput];
         $fechaMensaje = date("Y-m-d H:i:s", $_SERVER["REQUEST_TIME"]);
 
@@ -29,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         echo "Emisor: $emisor <br>";
-        echo "Destinatario: $destinatario <br>";
+        echo "Destinatarios: $destinatario1 + $destinatario2 <br>";
         echo "Mensaje: $message <br>";
         echo "Privado: $privado <br>";
         echo "Fecha mensaje: $fechaMensaje <br>";
@@ -53,7 +56,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // 4. Checking if the table is created
 
         $sql = "INSERT INTO mensajes (sender, receiver, privado, fecha, message)
-                VALUES ('$emisor', '$destinatario', '$privado', '$fechaMensaje', '$message')";
+                VALUES ('$emisor', '$destinatario1', '$privado', '$fechaMensaje', '$message')
+                VALUES ('$emisor', '$destinatario2', '$privado', '$fechaMensaje', '$message')";
 
         if (mysqli_query($connection, $sql)) {
             echo "New record created successfully";
