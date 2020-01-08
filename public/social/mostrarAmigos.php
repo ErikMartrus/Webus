@@ -14,7 +14,7 @@ if (mysqli_connect_errno()) {
 }
 
 // Cogemos el id del usuario
-
+if(isset($_SESSION["user"])){
 $idUsuarioLogeado = $_SESSION["user"]["id"];
 
 $nombreUsuario = "";
@@ -75,3 +75,6 @@ if ($result = mysqli_query($connection, $sqlUsuariosQueMeSiguen)) {
 }
 
 mysqli_close($connection);
+}else{
+    echo "Es necesario estar logueado";
+}

@@ -11,7 +11,7 @@ $connection = mysqli_connect($host, $user, $databasePassword, $database);
 if (mysqli_connect_errno()) {
     die(mysqli_connect_error());
 }
-
+if(isset($_SESSION["user"])){
 // Si el usuario es el logeado
 if (!isset($_GET["id_user"])) {
     $nombre = "";
@@ -35,6 +35,7 @@ if (!isset($_GET["id_user"])) {
 
     mysqli_close($connection);
 }
+
 
 // Si un usuario ha sido seleccionado
 else {
@@ -60,4 +61,7 @@ else {
 
     mysqli_close($connection);
 
+}
+}else{
+    echo "Es necesario estar logeado";
 }

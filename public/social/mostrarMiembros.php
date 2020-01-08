@@ -12,7 +12,7 @@ $connection = mysqli_connect($host, $user, $databasePassword, $database);
 if (mysqli_connect_errno()) {
     die(mysqli_connect_error());
 }
-
+if(isset($_SESSION["user"])){
 // 3. Cogemos ID usuario logeado
 
 $idUsuarioLogeado = $_SESSION["user"]["id"];
@@ -96,3 +96,6 @@ if ($result = mysqli_query($connection, $sqlUsuarios)) {
 }
 
 mysqli_close($connection);
+}else{
+    echo "Ha de loguearse primero";
+}

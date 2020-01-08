@@ -13,7 +13,7 @@ if (mysqli_connect_errno()) {
     die(mysqli_connect_error());
 }
 
-
+if(isset($_SESSION["user"])){
 $idUsuarioLogeado = $_SESSION["user"]["id"];
 
 $sqlUsuarioLogeado = "SELECT * FROM users WHERE id = '$idUsuarioLogeado'";
@@ -77,7 +77,7 @@ if ($result = mysqli_query($connection, $sqlMensajes)) {
         $receiverID = $row['receiver'];
         $privado = $row['privado'];
         $fechaMensaje = $row['fecha'];
-        $mensaje = $row['mensaje'];
+        $mensaje = $row['message'];
 
         $sqlUser = "SELECT * FROM users WHERE id='$receiverID'";
 
@@ -104,3 +104,6 @@ if ($result = mysqli_query($connection, $sqlMensajes)) {
 }
 
 mysqli_close($connection);
+}else{
+    echo "Ha de estar logueado primero";
+}

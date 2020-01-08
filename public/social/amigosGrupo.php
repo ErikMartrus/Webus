@@ -14,7 +14,7 @@ if (mysqli_connect_errno()) {
 }
 
 // Cogemos el id del usuario
-
+if(isset($_SESSION["user"])){
 $idUsuarioLogeado = $_SESSION["user"]["id"];
 $nombreUsuarioLogeado= $_SESSION["user"]["nombre"];
 
@@ -53,3 +53,6 @@ if ($result = mysqli_query($connection, $sqlUsuariosSeguidos)) {
 
 
 mysqli_close($connection);
+}else{
+    echo "Ha de loguearse primero";
+}
