@@ -176,7 +176,7 @@
                             Destinatario: 
                             <select name="destinatario" required>
                                 <option value="" disabled selected>--Seleccionar--</option>
-                                <?php include('UsuarioMensaje.php');?>
+                                <?php include('./UsuarioMensaje.php');?>
                             </select>
                             <textarea style="margin-top: 10px;" name="mensaje" required></textarea>
                             <div class="form-check" style="margin-top: 10px;">
