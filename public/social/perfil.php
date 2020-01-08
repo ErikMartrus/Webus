@@ -167,12 +167,25 @@
   <div class="contenedor">
 
     <section id="main">
-    <form method="POST" action="editProfile.php">
-            <h1>Perfil</h1>
-            <div><span>Nombre</span></div><input type="text" id="nombre" name="nombreUsuario" required>
-            <div id="descripcion"><textarea id="descripcion" placeholder="Estado" name="emailUsuario" required></textarea></div>
-            <div><button class="btn btn-primary btn-block" id="nuevo_canal_button" type="submit">Actualizar</button></div>
-        </form>
+    <form  action="editProfile.php" method="POST">
+    <div class="contenedor--form">
+      <div class="items--form">
+        <label for="name">Nombre: <span class="required">*</span></label>
+        <input type="text" id="nombreUsuario" name="nombreUsuario" value="" placeholder="Nombre del producto" required autofocus />
+      </div>
+      <div class="items--form">
+        <label for="name">Información: <span class="required">*</span></label>
+        <input type="text" id="description" name="informacionUsuario" value="" placeholder="Información" required autofocus />
+      </div>
+      <div class="items--form">
+        <label for="name">Url de la  foto de perfil: <span class="required">*</span></label>
+        <input type="url" name="foto" value="" placeholder="url de la imagen">
+      </div>
+      <div class="enter items--form">
+          <button type="submit" class="btn btn--iot btn--addProducto">Actualizar</button>
+      </div>
+    </div>
+    </form>
     </section>
   </div>
   <footer id="piePagina">

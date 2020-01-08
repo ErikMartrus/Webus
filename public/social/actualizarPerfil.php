@@ -13,23 +13,23 @@ if (mysqli_connect_errno()) {
 }
 
 // Si el usuario es el logeado
-if (!isset($_GET["user"]["id"])) {
+if (!isset($_GET["id_user"])) {
     $nombre = "";
 
 
     echo "<h3>Mi perfil</h3>";
-    $email = $_SESSION["user"]["email"]; 
-    $sqlUser = "SELECT * FROM users WHERE email=$email";
-    $userID = 0;
+    $userID = $_SESSION["user"]["id"]; 
+    $sqlUser = "SELECT * FROM profiles WHERE id_user='$userID'";
     if ($result = mysqli_query($connection, $sqlUser)) {
         if ($row = mysqli_fetch_assoc($result)) {
-            $userID = $row["id"];
+            $texto = $row['texto'];
+            $fotoPerfil = $row['image'];
+            $nombre = $row['nombre'];
 
-            $email = $row["email"];
-            $nombre = $row["nombre"];
-
+            echo "<img class='foto' src= $fotoPerfil alt='foto'>";
             echo "<p>Nombre: $nombre </p>";
-            echo "<p>Email: $email </p>";
+            echo "<p>Información del perfil: $texto </p>";
+           
         }
     }
 
@@ -39,21 +39,22 @@ if (!isset($_GET["user"]["id"])) {
 // Si un usuario ha sido seleccionado
 else {
 
-    $idUsuarioSeleccionado = $_GET["idUsuario"];
+    $idUsuarioSeleccionado = $_GET["user"]["id"];
 
     $nombre = "";
     $email = "";
 
-    $sqlUser = "SELECT * FROM users WHERE id = $idUsuarioSeleccionado";
+    $sqlUser = "SELECT * FROM profiles WHERE id = '$idUsuarioSeleccionado'";
     if ($result = mysqli_query($connection, $sqlUser)) {
         if ($row = mysqli_fetch_assoc($result)) {
-            $email = $row["email"];
-            $nombre = $row["nombre"];
+            $texto = $row['texto'];
+            $fotoPerfil = $row['image'];
+            $nombre = $row['nombre'];
 
-            echo "<h3 style='margin-top: 10px;'>Perfil de: $nombre</h3>";
-
+            echo "<img class='foto' src= $fotoPerfil alt='foto'>";
             echo "<p>Nombre: $nombre </p>";
-            echo "<p>Estado: $email </p>";
+            echo "<p>Información del perfil: $texto </p>";
+           
         }
     }
 

@@ -168,7 +168,7 @@ if (!$conn) {
         <h1>Bienvenido a la tienda virtual de MywebIOT</h1>
       </hgroup>
     </header>
-    <?php include('actualizarPerfil.php'); ?>
+    <?php include('./actualizarPerfil.php'); ?>
   </article>
 
   <article class="articuloCompra">

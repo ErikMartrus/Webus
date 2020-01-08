@@ -1,17 +1,19 @@
 <?php
 session_start();
 $nombrePerfil = "nombreUsuario";
-$emailPerfil = "emailUsuario";
+$informacionPerfil = "informacionUsuario";
+$foto =  "foto";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (
-        isset($_POST[$nombrePerfil]) && isset($_POST[$emailPerfil])
+        isset($_POST[$nombrePerfil]) && isset($_POST[$informacionPerfil])
     ) {
 
         $name = $_POST[$nombrePerfil];
-        $email = $_POST[$emailPerfil];
+        $info = $_POST[$informacionPerfil];
+        $foto =  $_POST[$foto];
 
-        function saveInformationToDatabase($name, $email)
+        function saveInformationToDatabase($name, $info, $foto)
         {
 
             $host = "localhost";
@@ -29,18 +31,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 die(mysqli_connect_error());
             }
 
-            
+            $email=$_SESSION["user"]["email"];
 
-            $sqlUser = "SELECT * FROM users WHERE email='" . $_SESSION["user"] . "'";
+            $sqlUser = "SELECT * FROM users WHERE email='$email'";
             $userID = 0;
             if ($result = mysqli_query($connection, $sqlUser)) {
                 if ($row = mysqli_fetch_assoc($result)) {
-                    $userID = $row["id"];
+                    $userID = $row['id'];
                 }
             }
 
 
-            $sql = "UPDATE users SET nombre = '$name', email = '$email' WHERE id_user = '$userID'";
+            $sql = "UPDATE profiles SET nombre = '$name', texto = '$info', image ='$foto' WHERE id_user = '$userID'";
 
             if (mysqli_query($connection, $sql)) {
                 echo "New record created successfully";
@@ -54,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
       
-        saveInformationToDatabase($name, $email);
+        saveInformationToDatabase($name, $info, $foto);
     }
 }
 ?>
