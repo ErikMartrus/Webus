@@ -38,9 +38,9 @@ if ($result = mysqli_query($connection, $sqlUsuariosSeguidos)) {
                 $correoUsuario = $row2["email"];
                 $idAmigo = $row2["id"];
 
-                echo "<p class='parrafo-miembros-social'>
+                echo "<p>
                 <b> Nombre: </b> $nombreUsuario --- 
-                <b> Correo Electrónico: <a href=\"./social.php?idUsuario=".$idAmigo."\" id='paragraph_canales'>  $correoUsuario </a></b> 
+                <b> Correo Electrónico: <a href=\"social.php?idUsuario=".$idAmigo."\" id='paragraph_canales'>  $correoUsuario </a></b> 
                 </p>";        
             }
         }
@@ -67,7 +67,7 @@ if ($result = mysqli_query($connection, $sqlUsuariosQueMeSiguen)) {
 
                 echo "<p class='parrafo-miembros-social'>
                 <b> Nombre: </b> $nombreUsuario --- 
-                <b> Correo Electrónico: <a href=\"./social.php?idUsuario=".$idAmigo."\" id='paragraph_canales'>  $correoUsuario </a></b> 
+                <b> Correo Electrónico: <a href=\"social.php?idUsuario=".$idAmigo."\" id='paragraph_canales'>  $correoUsuario </a></b> 
                 </p>";        
             }
         }

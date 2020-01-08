@@ -49,7 +49,7 @@ if ($result = mysqli_query($connection, $sqlMensajes)) {
                 $nombreReceptor = $row2["nombre"];
                 $emailReceptor = $row2["email"];
 
-                echo "<p class='parrafo-miembros-social'>
+                echo "<p>
                 <b>Mensaje:</b> $mensaje. 
                 <b>Receptor:</b> $nombreReceptor.
                 <b>Emisor:</b> $nombreEmisor.
@@ -67,7 +67,7 @@ if ($result = mysqli_query($connection, $sqlMensajes)) {
 
 //MENSAJES RECIBIDOS CORRECTAMENTE
 
-echo "<h3 class='parrafo-miembros-social'> Mensajes recibidos </h3>";
+echo "<h3> Mensajes recibidos </h3>";
 
 $sqlMensajes = "SELECT * FROM mensajes WHERE receiver = $idUsuarioLogeado";
 
@@ -86,7 +86,7 @@ if ($result = mysqli_query($connection, $sqlMensajes)) {
                 $nombreReceptor = $row2["nombre"];
                 $emailReceptor = $row2["email"];
 
-                echo "<p class='parrafo-miembros-social'>
+                echo "<p>
                 <b>Mensaje:</b> $mensaje. 
                 <b>Receptor:</b> $nombreReceptor.
                 <b>Emisor:</b> $nombreEmisor.

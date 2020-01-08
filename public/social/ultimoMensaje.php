@@ -42,7 +42,7 @@ if ($result4 = mysqli_query($connection, $sqlNombreAmigo)) {
             }
         }
 
-        echo "<p class='parrafo-miembros-social'>
+        echo "<p>
                 <b>Mensaje:</b> $mensaje. 
                 <b>Receptor:</b> $nombreReceptor.
                 <b>Emisor:</b> $nombreEmisor.

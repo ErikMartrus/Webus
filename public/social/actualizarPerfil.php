@@ -13,13 +13,13 @@ if (mysqli_connect_errno()) {
 }
 
 // Si el usuario es el logeado
-if (!isset($_GET["idUsuario"])) {
+if (!isset($_GET["user"]["id"])) {
     $nombre = "";
-    $email = "";
+
 
     echo "<h3>Mi perfil</h3>";
-
-    $sqlUser = "SELECT * FROM users WHERE email='" . $_SESSION["user"] . "'";
+    $email = $_SESSION["user"]["email"]; 
+    $sqlUser = "SELECT * FROM users WHERE email=$email";
     $userID = 0;
     if ($result = mysqli_query($connection, $sqlUser)) {
         if ($row = mysqli_fetch_assoc($result)) {
@@ -28,8 +28,8 @@ if (!isset($_GET["idUsuario"])) {
             $email = $row["email"];
             $nombre = $row["nombre"];
 
-            echo "<p class='text-center paragraph-profile'>Nombre: $nombre </p>";
-            echo "<p class='text-center paragraph-profile'>Email: $email </p>";
+            echo "<p>Nombre: $nombre </p>";
+            echo "<p>Email: $email </p>";
         }
     }
 
@@ -50,10 +50,10 @@ else {
             $email = $row["email"];
             $nombre = $row["nombre"];
 
-            echo "<h3 style='margin-top: 10px;'>Perfil de: $nombre</h3><img class='rounded-circle' src='assets/img/avatar-dhg.png'>";
+            echo "<h3 style='margin-top: 10px;'>Perfil de: $nombre</h3>";
 
-            echo "<p class='text-center paragraph-profile'>Nombre: $nombre </p>";
-            echo "<p class='text-center paragraph-profile'>Estado: $email </p>";
+            echo "<p>Nombre: $nombre </p>";
+            echo "<p>Estado: $email </p>";
         }
     }
 

@@ -23,7 +23,7 @@ if (!$conn) {
   <title>MyIOTShop</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/misEstilos.css">
+  <link rel="stylesheet" href="../css/misEstilos.css">
   <script> 
     function borrar(dato){
         alert(dato);
@@ -185,12 +185,13 @@ if (!$conn) {
         <header>
           <div class="row">
                         <div>
-                            <a href="amigos.php"> <button class="btn btn-primary" type="button">Amigos</button> </a>
-                            <a href="miembros.php"> <button class="btn btn-primary" type="button">Miembros</button> </a>
-                            <a href="mensajes.php"> <button class="btn btn-primary-naranja" type="button">Mensajes</button> </a>
-                            <a href="perfil.php"> <button class="btn btn-primary-naranja" type="button">Perfil</button> </a>
+                            <a href="amigos.php"> <button class="btn btn--iot" type="button">Amigos</button> </a>
+                            <a href="miembros.php"> <button class="btn btn--iot" type="button">Miembros</button> </a>
+                            <a href="mensajes.php"> <button class="btn btn--iot" type="button">Mensajes</button> </a>
+                            <a href="perfil.php"> <button class="btn btn--iot" type="button">Perfil</button> </a>
                         </div>
         <header>
+            <div></div>
         <h3>Últimos mensajes</h3>
         <p id="lastMessages"></p>
 
