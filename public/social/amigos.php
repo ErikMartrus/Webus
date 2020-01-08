@@ -42,22 +42,22 @@
         style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.php">MywebIOT <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="canales.php">Canales</a>
+            <a class="nav-link" href="../canales.php">Canales</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ayuda.php">Ayuda</a>
+            <a class="nav-link" href="../ayuda.php">Ayuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.php">Contactos</a>
+            <a class="nav-link" href="../contacto.php">Contactos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="productos.php">Productos</a>
+            <a class="nav-link" href="../productos.php">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
+            <a class="nav-link" href="../carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="social/social.php">MyIOT Social</a>
@@ -65,10 +65,10 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="register.php">Register</a>
+            <a class="nav-link" href="../register.php">Register</a>
           </li>
 
         </ul>
@@ -83,22 +83,22 @@
         style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.php">MywebIOT <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="canales.php">Canales</a>
+            <a class="nav-link" href="../canales.php">Canales</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ayuda.php">Ayuda</a>
+            <a class="nav-link" href="../ayuda.php">Ayuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.php">Contactos</a>
+            <a class="nav-link" href="../contacto.php">Contactos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="productos.php">Productos</a>
+            <a class="nav-link" href="../productos.php">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
+            <a class="nav-link" href="../carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="social/social.php">MyIOT Social</a>
@@ -113,19 +113,19 @@
         style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.php">MywebIOT <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="canales.php">Canales</a>
+            <a class="nav-link" href="../canales.php">Canales</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ayuda.php">Ayuda</a>
+            <a class="nav-link" href="../ayuda.php">Ayuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.php">Contactos</a>
+            <a class="nav-link" href="../contacto.php">Contactos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
+            <a class="nav-link" href="../carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="social/social.php">MyIOT Social</a>
@@ -138,10 +138,10 @@
         ?>
           <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="FormularioLogin.php"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../FormularioLogin.php"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
           </li>
           </ul>
         <?php
@@ -149,10 +149,10 @@
         ?>
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="register.php">Register</a>
+            <a class="nav-link" href="../register.php">Register</a>
           </li>
 
         </ul>
@@ -170,10 +170,10 @@
       <article class="articulo1">
         <header>
           <hgroup>
-            <h1>Mis Amigos</h1>
+            <h1>Mi Grupo</h1>
           </hgroup>
         </header>
-        <?php include('mostrarAmigos.php');?>
+        <?php include('amigosGrupo.php');?>
         </header>
       </article>
     </section>

@@ -15,7 +15,7 @@ if (mysqli_connect_errno()) {
 
 // 3. Cogemos ID usuario logeado
 
-$idUsuarioLogeado = $_SESSION["user"];
+$idUsuarioLogeado = $_SESSION["user"]["id"];
 
 // 4. Cogemos todos los usuarios menos el logeado 
 
