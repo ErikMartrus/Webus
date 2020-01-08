@@ -31,7 +31,7 @@ if (!$conn) {
 
   <header>
     <nav class="cabecera navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.php"><img class="img-Index" src="assets/img/IOT.png" alt="" style="object-fit: cover"></a>
+      <a class="navbar-brand" href="../index.php"><img class="img-Index" src="assets/img/IOT.png" alt="" style="object-fit: cover"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -96,7 +96,7 @@ if (!$conn) {
             <a class="nav-link" href="../carrito.php">MyIOTShop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="social/social.php">MyIOT Social</a>
+            <a class="nav-link" href="social.php">MyIOT Social</a>
           </li>
         </ul>
         <?php
@@ -123,7 +123,7 @@ if (!$conn) {
             <a class="nav-link" href="../carrito.php">MyIOTShop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="social/social.php">MyIOT Social</a>
+            <a class="nav-link" href="social.php">MyIOT Social</a>
           </li>
         </ul>
         <?php
@@ -161,46 +161,17 @@ if (!$conn) {
   <!-- 80% -->
   <div class="contenedor">
 
-<section id="main">
-  <article class="articulo">
-    <header>
-      <hgroup>
-        <h1>Bienvenido a la tienda virtual de MywebIOT</h1>
-      </hgroup>
-    </header>
-    <?php include('actualizarPerfil.php'); ?>
-  </article>
-
-  <article class="articuloCompra">
+    <section id="main">
+      <article class="articulo1">
         <header>
-          <div class="row">
-                        <div>
-                            <a href="amigos.php"> <button class="btn btn--iot" type="button">Amigos</button> </a>
-                            <a href="miembros.php"> <button class="btn btn--iot" type="button">Miembros</button> </a>
-                            <a href="mensajes.php"> <button class="btn btn--iot" type="button">Mensajes</button> </a>
-                            <a href="perfil.php"> <button class="btn btn--iot" type="button">Perfil</button> </a>
-                        </div>
-        <header>
-            <div></div>
-        <h3>Últimos mensajes</h3>
-        <p id="lastMessages"></p>
-
-
-      </header>
+          <hgroup>
+            <h1>Mi Grupo</h1>
+          </hgroup>
         </header>
-  </article>
-  </section>
-
-   <!-- CONSEGUIMOS POR AJAX LOS ÚLTIMOS 5 MENSAJES DE LA RED SOCIAL-->
-   <script>
-        function get_lastMessages() {
-            $("#lastMessages").load("./scripts/getLastMessagesSocial.php");
-            setTimeout(get_lastMessages, 1000);
-        };
-    </script>
-    <script>
-        setTimeout(get_lastMessages, 1000);
-    </script>
+        <?php include('amigosGrupo.php');?>
+        </header>
+      </article>
+    </section>
 
 </div>
   <!-- 10% -->

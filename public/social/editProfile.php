@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
             $connection = mysqli_connect($host, $user, $databasePassword, $database);
 
-            $fechaCanal = date("Y-m-d H:i:s");
+           
 
            
             if (mysqli_connect_errno()) {

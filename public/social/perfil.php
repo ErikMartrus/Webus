@@ -30,7 +30,7 @@
   <!-- 10% -->
   <header>
     <nav class="cabecera navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.php"><img class="img-Index" src="assets/img/IOT.png" alt="" style="object-fit: cover"></a>
+      <a class="navbar-brand" href="../index.php"><img class="img-Index" src="assets/img/IOT.png" alt="" style="object-fit: cover"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -42,33 +42,33 @@
         style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.php">MywebIOT <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="canales.php">Canales</a>
+            <a class="nav-link" href="../canales.php">Canales</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ayuda.php">Ayuda</a>
+            <a class="nav-link" href="../ayuda.php">Ayuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.php">Contactos</a>
+            <a class="nav-link" href="../contacto.php">Contactos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="productos.php">Productos</a>
+            <a class="nav-link" href="../productos.php">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
+            <a class="nav-link" href="../carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="social/social.php">MyIOT Social</a>
+            <a class="nav-link" href="social.php">MyIOT Social</a>
           </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="register.php">Register</a>
+            <a class="nav-link" href="../register.php">Register</a>
           </li>
 
         </ul>
@@ -83,25 +83,25 @@
         style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.php">MywebIOT <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="canales.php">Canales</a>
+            <a class="nav-link" href="../canales.php">Canales</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ayuda.php">Ayuda</a>
+            <a class="nav-link" href="../ayuda.php">Ayuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.php">Contactos</a>
+            <a class="nav-link" href="../contacto.php">Contactos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="productos.php">Productos</a>
+            <a class="nav-link" href="../productos.php">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
+            <a class="nav-link" href="../carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="social/social.php">MyIOT Social</a>
+            <a class="nav-link" href="social.php">MyIOT Social</a>
           </li>
         </ul>
         <?php
@@ -113,22 +113,22 @@
         style="display: flex; justify-content:space-between">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.php">MywebIOT <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="canales.php">Canales</a>
+            <a class="nav-link" href="../canales.php">Canales</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ayuda.php">Ayuda</a>
+            <a class="nav-link" href="../ayuda.php">Ayuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.php">Contactos</a>
+            <a class="nav-link" href="../contacto.php">Contactos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
+            <a class="nav-link" href="../carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="social/social.php">MyIOT Social</a>
+            <a class="nav-link" href="social.php">MyIOT Social</a>
           </li>
         </ul>
         <?php
@@ -138,10 +138,10 @@
         ?>
           <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="FormularioLogin.php"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../FormularioLogin.php"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
           </li>
           </ul>
         <?php
@@ -149,10 +149,10 @@
         ?>
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="register.php">Register</a>
+            <a class="nav-link" href="../register.php">Register</a>
           </li>
 
         </ul>
