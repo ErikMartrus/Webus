@@ -40,7 +40,7 @@ if ($result = mysqli_query($connection, $sqlMensajes)) {
         $receiverID = $row['receiver'];
         $privado = $row['privado'];
         $fechaMensaje = $row['fecha'];
-        $mensaje = $row['mensaje'];
+        $mensaje = $row['message'];
 
         $sqlUser = "SELECT * FROM users WHERE id='$receiverID'";
 

@@ -201,7 +201,7 @@ if (!$conn) {
    <!-- CONSEGUIMOS POR AJAX LOS ÚLTIMOS 5 MENSAJES DE LA RED SOCIAL-->
    <script>
         function get_lastMessages() {
-            $("#lastMessages").load("./scripts/getLastMessagesSocial.php");
+            $("#lastMessages").load("ultimoMensaje.php");
             setTimeout(get_lastMessages, 1000);
         };
     </script>

@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         isset($_POST[$messageIDInput])
     ) {
 
-        $emisor = $_SESSION["userID"];
+        $emisor = $_SESSION["user"]["id"];
         $destinatario = $_POST[$destinatarioIDInput];
         $message = $_POST[$messageIDInput];
         $fechaMensaje = date("Y-m-d H:i:s", $_SERVER["REQUEST_TIME"]);

@@ -19,7 +19,7 @@ $sqlNombreAmigo = "SELECT * FROM mensajes WHERE privado = 0 ORDER BY fecha DESC 
 
 if ($result4 = mysqli_query($connection, $sqlNombreAmigo)) {
     while ($row4 = mysqli_fetch_array($result4)) {
-        $mensaje = $row4['mensaje'];
+        $mensaje = $row4['message'];
         $idEmisor = $row4['sender'];
         $idReceptor = $row4['receiver'];
         $fechaMensaje = $row4['fecha'];
