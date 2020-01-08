@@ -1,131 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php
+//Arrancamos la sesion del usuario
 session_start();
-require_once 'functions.php';
-$userstr = 'Welcome Guest';
-if (isset($_SESSION['user'])) {
-    $user = $_SESSION['user'];
-    $loggedin = TRUE;
-} else {
-    $loggedin = FALSE;
-    header('location:../index.php');
+// Create connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$bdname = "laboratorio";
+
+$conn = mysqli_connect($servername, $username, $password, $bdname);
+// Check connection
+
+if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
 }
 ?>
-
-<!DOCTYPE html>
-<html>
 <head>
-    <meta charset='utf-8'>
-    <title>Red Social</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script src ="https://code.jquery.com/jquery 3.4.1.js"></script>
-    <link rel='stylesheet' href='jquery.mobile-1.4.5.min.css'>
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/stylesPayPal.css">
-    <script>
-        function get_messages() {
-            $("#messages").load("ajaxMensajes.php");
-            setTimeout(get_messages, 10000);
-        }
-    </script>
+  <meta charset="utf-8">
+  <meta name="description" content="This is an HTML5/CSS3 example">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript">
+  <title>MyIOTShop</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/misEstilos.css">
+  <script> 
+    function borrar(dato){
+        alert(dato);
+        $.post("php/borrarProducto.php", {id: dato}, function(data){
+          alert(data);
+        }); 
+        
+    }
+    
+  </script>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="cabecera">
-    <div class="container-fluid">
+  <!-- 10% -->
 
-        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
-                    class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item" role="presentation"><a class="nav-link active" href="../index.php">MyWebIoT</a>
-                </li>
-                <li class='nav-item' role='presentation'><a class='nav-link active' href='../frontEndUser.php'>Mis
-                        Canales</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link active" href="../ayuda.php">Ayuda</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link active" href="../contacto.php">Contacto</a>
-                </li>
-                <li class='nav-item' role='presentation'><a class='nav-link active' href='../paypal/products.php'>Productos</a>
-                </li>
-                <li class="nav-item" role="presentation"><a class="nav-link active" href="../atencionCliente.php">Atención
-                        al cliente</a></li>
+  <header>
+    <nav class="cabecera navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.php"><img class="img-Index" src="assets/img/IOT.png" alt="" style="object-fit: cover"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <?php
+      if(!isset($_SESSION["user"])){
+      ?>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"
+        style="display: flex; justify-content:space-between">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="canales.php">Canales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ayuda.php">Ayuda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.php">Contactos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.php">Productos</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.php">Register</a>
+          </li>
 
-            </ul>
-            <ul class="nav navbar-nav">
-                <li class='nav-item' role='presentation'><a class='nav-link active' href='social.php'>Social</a></li>
-                <li class='nav-item' role='presentation'><a class='nav-link active' href='../scripts/logout.php'>Log
-                        Out</a></li>
-
-
-            </ul>
+        </ul>
         </div>
-    </div>
-</nav>
+    </nav>
+  </header>
+      <?php
+      }else{
+        if($_SESSION["user"]["nombre"]=='Erik Martrus'){
+      ?> 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"
+        style="display: flex; justify-content:space-between">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="canales.php">Canales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ayuda.php">Ayuda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.php">Contactos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.php">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carrito.php">MyIOTShop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="social/social.php">MyIOT Social</a>
+          </li>
+        </ul>
+        <?php
+        
+        }else{
+        
+        ?>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"
+        style="display: flex; justify-content:space-between">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php">MywebIOT <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="canales.php">Canales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ayuda.php">Ayuda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.php">Contactos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carrito.php">MyIOTShop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="social/social.php">MyIOT Social</a>
+          </li>
+        </ul>
+        <?php
+        }
+        if(isset($_SESSION["user"])){    
+          $nombreUsuario = $_SESSION["user"]["nombre"]; 
+        ?>
+          <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="FormularioLogin.php"><?php echo $nombreUsuario?><span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="php/LogOut.php">LogOut<span class="sr-only">(current)</span></a>
+          </li>
+          </ul>
+        <?php
+         }else{
+        ?>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="FormularioLogin.php">Login <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.php">Register</a>
+          </li>
 
-<?php if($loggedin){?>
-<div class="container">
-    <div class="row"></div>
-    <div class="row">
-        <div class="col-5 col-lg-3 d-flex flex-column justify-content-between px-0" id="header">
-            <nav class="navbar navbar-expand-lg navbar-light d-flex flex-column px-0">
-                <div id="m-navbar-brand" class="text-center"
-                     style="border: solid #505e6c; border-radius: 10px;height: 180px; width: 240px;padding: 10px">
-                    <img src="<?php echo $user;?>.jpg" alt="" class="rounded-circle img-fluid mx-auto mb-3">
-                    <h2 class="h5"> <?php echo $user; ?></h2>
-                    <h3 class="h5"> <?php echo showProfile($user); ?></h3>
+        </ul>
+        <?php
+         }
+        }
+        ?>
+      </div>
+    </nav>
+  </header>
+  <!-- 80% -->
+  <div class="contenedor">
+
+<section id="main">
+  <article class="articulo">
+    <header>
+      <hgroup>
+        <h1>Bienvenido a la tienda virtual de MywebIOT</h1>
+      </hgroup>
+    </header>
+    <?php include('actualizarPerfil.php'); ?>
+  </article>
+
+  <article class="articuloCompra">
+        <header>
+          <div class="row">
+                        <div>
+                            <a href="amigos.php"> <button class="btn btn-primary" type="button">Amigos</button> </a>
+                            <a href="miembros.php"> <button class="btn btn-primary" type="button">Miembros</button> </a>
+                            <a href="mensajes.php"> <button class="btn btn-primary-naranja" type="button">Mensajes</button> </a>
+                            <a href="perfil.php"> <button class="btn btn-primary-naranja" type="button">Perfil</button> </a>
+                        </div>
+        <header>
+        <h3>Últimos mensajes</h3>
+        <p id="lastMessages"></p>
 
 
-                </div>
+      </header>
+        </header>
+  </article>
+  </section>
 
-            </nav>
-        </div>
-        <div class="col flex-wrap">
-            <a href="members.php">
-                <button class="btn btn-outline-dark btn-block d-block" type="button">Miembros</button>
-            </a>
-            <a href="friends.php">
-                <button class="btn btn-outline-dark btn-block d-block" type="button">Amigos</button>
-            </a>
-            <a href="messages.php">
-                <button class="btn btn-outline-dark btn-block" type="button">Mensajes</button>
-            </a>
-            <a href="canales.php">
-                <button
-                        class="btn btn-outline-dark btn-block" type="button">Canales
-                </button>
-            </a>
-            <a href="profile.php">
-                <button class="btn btn-outline-dark btn-block" type="button">Perfil</button>
-            </a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div id="muro">
-                <h1>Muro de MyWebIoT</h1>
+   <!-- CONSEGUIMOS POR AJAX LOS ÚLTIMOS 5 MENSAJES DE LA RED SOCIAL-->
+   <script>
+        function get_lastMessages() {
+            $("#lastMessages").load("./scripts/getLastMessagesSocial.php");
+            setTimeout(get_lastMessages, 1000);
+        };
+    </script>
+    <script>
+        setTimeout(get_lastMessages, 1000);
+    </script>
 
-                <div id="messages"></div>
-
-
-            </div>
-        </div>
-    </div>
 </div>
- <?php }?>
-<script>
-setTimeout(get_messages, 1000);
-</script>
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-<script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
-<script src="../assets/js/vertical-navbar-with-menu-and-social-menu.js"></script>
+  <!-- 10% -->
+  <footer id="piePaginaCarrito">
+    <p class="text">Footer</p>
+  </footer>
 
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </html>
