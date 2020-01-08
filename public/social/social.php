@@ -179,6 +179,7 @@ if (!$conn) {
                             <a href="miembros.php"> <button class="btn btn--iot" type="button">Miembros</button> </a>
                             <a href="mensajes.php"> <button class="btn btn--iot" type="button">Mensajes</button> </a>
                             <a href="perfil.php"> <button class="btn btn--iot" type="button">Perfil</button> </a>
+                            <a href="grupo.php"> <button class="btn btn--iot" type="button">Grupo</button> </a>
                         </div>
         <header>
             <div></div>
