@@ -14,40 +14,40 @@ if (mysqli_connect_errno()) {
 }
 
 
-$idUsuarioLogeado = $_SESSION["user"];
+$idUsuarioLogeado = $_SESSION["user"]["id"];
 
-$sqlUsuarioLogeado = "SELECT * FROM users WHERE id = $idUsuarioLogeado";
+$sqlUsuarioLogeado = "SELECT * FROM users WHERE id = '$idUsuarioLogeado'";
 
 $nombreEmisor = "";
 
 if ($result1 = mysqli_query($connection, $sqlUsuarioLogeado)) {
     if ($row1 = mysqli_fetch_assoc($result1)) {
-        $nombreEmisor = $row1["nombre"];
-        $emailReceptor = $row1["email"];
+        $nombreEmisor = $row1['nombre'];
+        $emailReceptor = $row1['email'];
     }
 }
 
 
 // MENSAJES ENVIADOS
 
-$sqlMensajes = "SELECT * FROM mensajes WHERE sender = $idUsuarioLogeado";
+$sqlMensajes = "SELECT * FROM mensajes WHERE sender = '$idUsuarioLogeado'";
 
 echo "<h3> Mensajes enviados </h3>";
 
 if ($result = mysqli_query($connection, $sqlMensajes)) {
     while ($row = mysqli_fetch_array($result)) {
         $senderID = $idUsuarioLogeado;
-        $receiverID = $row["receiver"];
-        $privado = $row["privado"];
-        $fechaMensaje = $row["fecha"];
-        $mensaje = $row["mensaje"];
+        $receiverID = $row['receiver'];
+        $privado = $row['privado'];
+        $fechaMensaje = $row['fecha'];
+        $mensaje = $row['mensaje'];
 
         $sqlUser = "SELECT * FROM users WHERE id='$receiverID'";
 
         if ($result2 = mysqli_query($connection, $sqlUser)) {
             if ($row2 = mysqli_fetch_assoc($result2)) {
-                $nombreReceptor = $row2["nombre"];
-                $emailReceptor = $row2["email"];
+                $nombreReceptor = $row2['nombre'];
+                $emailReceptor = $row2['email'];
 
                 echo "<p>
                 <b>Mensaje:</b> $mensaje. 
@@ -69,22 +69,22 @@ if ($result = mysqli_query($connection, $sqlMensajes)) {
 
 echo "<h3> Mensajes recibidos </h3>";
 
-$sqlMensajes = "SELECT * FROM mensajes WHERE receiver = $idUsuarioLogeado";
+$sqlMensajes = "SELECT * FROM mensajes WHERE receiver = '$idUsuarioLogeado'";
 
 if ($result = mysqli_query($connection, $sqlMensajes)) {
     while ($row = mysqli_fetch_array($result)) {
         $senderID = $idUsuarioLogeado;
-        $receiverID = $row["receiver"];
-        $privado = $row["privado"];
-        $fechaMensaje = $row["fecha"];
-        $mensaje = $row["mensaje"];
+        $receiverID = $row['receiver'];
+        $privado = $row['privado'];
+        $fechaMensaje = $row['fecha'];
+        $mensaje = $row['mensaje'];
 
         $sqlUser = "SELECT * FROM users WHERE id='$receiverID'";
 
         if ($result2 = mysqli_query($connection, $sqlUser)) {
             if ($row2 = mysqli_fetch_assoc($result2)) {
-                $nombreReceptor = $row2["nombre"];
-                $emailReceptor = $row2["email"];
+                $nombreReceptor = $row2['nombre'];
+                $emailReceptor = $row2['email'];
 
                 echo "<p>
                 <b>Mensaje:</b> $mensaje. 

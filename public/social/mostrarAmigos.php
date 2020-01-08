@@ -15,7 +15,7 @@ if (mysqli_connect_errno()) {
 
 // Cogemos el id del usuario
 
-$idUsuarioLogeado = $_SESSION["user"];
+$idUsuarioLogeado = $_SESSION["user"]["id"];
 
 $nombreUsuario = "";
 $idUsuario = "";

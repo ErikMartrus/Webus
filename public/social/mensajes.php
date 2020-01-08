@@ -190,7 +190,7 @@
                 <div class="col">
                     <article class="article1_shop">
                         <h1 class="text-center" id="card_header">Mensajes</h1>
-                        <?php include('mostrarMensaje.php');?>
+                        <?php include('./mostrarMensajes.php');?>
                     </article>
                 </div>
             </div>
