@@ -17,7 +17,7 @@ if (!isset($_GET["id_user"])) {
     $nombre = "";
 
 
-    echo "<h3>Mi perfil</h3>";
+    echo "<p class='miPerfil'>Mi perfil</p>";
     $userID = $_SESSION["user"]["id"]; 
     $sqlUser = "SELECT * FROM profiles WHERE id_user='$userID'";
     if ($result = mysqli_query($connection, $sqlUser)) {
@@ -27,8 +27,8 @@ if (!isset($_GET["id_user"])) {
             $nombre = $row['nombre'];
 
             echo "<img class='foto' src= $fotoPerfil alt='foto'>";
-            echo "<p>Nombre: $nombre </p>";
-            echo "<p>Información del perfil: $texto </p>";
+            echo "<p class='datosPerfil'>Nombre: $nombre </p>";
+            echo "<p class='datosPerfil1'>Información del perfil: $texto </p>";
            
         }
     }

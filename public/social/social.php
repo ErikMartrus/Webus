@@ -159,10 +159,10 @@ if (!$conn) {
     </nav>
   </header>
   <!-- 80% -->
-  <div class="contenedor">
+  <div class="contenedorPerfil">
 
 <section id="main">
-  <article class="articulo">
+  <article class="articuloSocial">
     <header>
       <hgroup>
         <h1>Bienvenido a la tienda virtual de MywebIOT</h1>
@@ -172,17 +172,8 @@ if (!$conn) {
   </article>
 
   <article class="articuloCompra">
-        <header>
-          <div class="row">
-                        <div>
-                            <a href="amigos.php"> <button class="btn btn--iot" type="button">Amigos</button> </a>
-                            <a href="miembros.php"> <button class="btn btn--iot" type="button">Miembros</button> </a>
-                            <a href="mensajes.php"> <button class="btn btn--iot" type="button">Mensajes</button> </a>
-                            <a href="perfil.php"> <button class="btn btn--iot" type="button">Perfil</button> </a>
-                            <a href="grupo.php"> <button class="btn btn--iot" type="button">Grupo</button> </a>
-                        </div>
-        <header>
-            <div></div>
+       <header>
+         <header>
         <h3>Últimos mensajes</h3>
         <p id="lastMessages"></p>
 
@@ -191,6 +182,21 @@ if (!$conn) {
         </header>
   </article>
   </section>
+
+  <aside id="lateralSocial">
+  <div class="col d-flex flex-column article1_shop">
+                    <h3 class="text-center" style="margin-top: 10px;">Opciones</h3>
+                    <div class="row">
+                        <div class="col d-flex flex-column justify-content-center align-items-center">
+                            <a href="amigos.php"> <button class="btn btn-primary opciones-perfil" type="button">Amigos</button> </a>
+                            <a href="miembros.php"> <button class="btn btn-primary opciones-perfil" type="button">Miembros</button> </a>
+                            <a href="mensajes.php"> <button class="btn btn-primary opciones-perfil-azul" type="button">Mensajes</button> </a>
+                            <a href="perfil.php"> <button class="btn btn-primary opciones-perfil-azul" type="button">Perfil</button> </a>
+                            <a href="grupo.php"> <button class="btn btn-primary opciones-perfil-azul" type="button">Grupo</button> </a>
+                            </div>
+                    </div>
+                </div>
+    </aside>
 
    <!-- CONSEGUIMOS POR AJAX LOS ÚLTIMOS 5 MENSAJES DE LA RED SOCIAL-->
    <script>

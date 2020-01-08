@@ -352,6 +352,11 @@ select{
     width: 55px;
     height: 45px;
 }
+.foto{
+    width: 105px;
+    height: 85px;
+    border-radius: 50%;
+}
 
 .btn--addProducto {
     display: block;
@@ -464,3 +469,60 @@ table {
     width: 25%;
     border: 1px solid #000;
  }
+ .miPerfil{
+    font-size: 25px;
+    text-transform: uppercase; 
+ }
+.datosPerfil{
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 15px;
+}
+.datosPerfil1{
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+.botonSocial{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-right: 20px;
+    text-align: right;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    width: 214vh;
+}
+.articuloSocial {
+    border: 1px solid #1E90FF;
+    text-align: left;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 50vh;
+}
+
+.contenedorPerfil {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 63.5% 35%;
+    grid-gap: 20px;
+    padding: 5px;
+}
+#lateralSocial {
+    width: 100%;
+    float: right;
+    border: 1px solid #1E90FF;
+    margin-top: 10px;
+    height: 50vh;
+}
+.btn.btn-primary.opciones-perfil-azul {
+    width: 100px;
+    margin: 10px;
+    background-color: #1E90FF;
+  }
+  .btn.btn-primary.opciones-perfil {
+    width: 100px;
+    margin: 10px;
+  }
