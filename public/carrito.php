@@ -206,7 +206,7 @@ if (!$conn) {
 
     <aside id="lateralCompra">
          <?php
-            include("paypal/mostrarCarrito.php");
+            include 'paypal/mostrarCarrito.php';
         ?>
     </aside>
 </div>

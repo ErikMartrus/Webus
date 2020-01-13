@@ -1,5 +1,5 @@
 <?php
-  if (isset($_POST['idproducto'])) {
+if (isset($_POST['idproducto'])) {
     if  (isset($_POST['cantidad'])) {
         //Añadir producto al carrito
         if (isset($_SESSION['carrito'][$_POST['idproducto']]))
@@ -80,11 +80,15 @@ elseif (isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) {
      echo "</form>";
      //Boton de Paypal
      echo "<div class='enter'>";
-     echo"<form method='POST' action='paypal/payments.php'>
+     echo"<form method='POST' action='paypal/payments.php' id='paypal_form'>
+     <input type='hidden' name='cmd' value='xclick'>
+    <input type='hidden' name='no_note' value='1'>
+    <input type='hidden' name='lc' value='UK'>
+    <input type='hidden' name='bn' value='PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest' />
      <input type='hidden' name='nombre' value='$nombreProducto'>
      <input type='hidden' name='precioTotal' value='$precioTotal'>
      <input type='hidden' name='stock' value='$stock'>";
-     echo "<button class='btn btn--iot' type='submit'><a href='paypal/payments.php'><img src='assets/img/PayPal-logo.png' alt='PayPal' width='50' height='35' />Checkout</button></a>";
+     echo "<button class='btn btn--iot' type='submit'><img src='assets/img/PayPal-logo.png' alt='PayPal' width='50' height='35' />Checkout</button>";
      echo "</div>";
      
 }
