@@ -165,7 +165,7 @@ if (!$conn) {
   <article class="articuloSocial">
     <header>
       <hgroup>
-        <h1>Bienvenido a la tienda virtual de MywebIOT</h1>
+        <h1>Bienvenido a la red social de MywebIOT</h1>
       </hgroup>
     </header>
     <?php include('./actualizarPerfil.php'); ?>
