@@ -48,6 +48,10 @@ if (!$conn) {
       </button>
       <?php
       if(!isset($_SESSION["user"])){
+        echo '<script>
+        alert("Solo puedes comprar en esta página si estas logueado");
+        </script>';
+      
       ?>
       <div class="collapse navbar-collapse" id="navbarSupportedContent"
         style="display: flex; justify-content:space-between">
@@ -63,6 +67,12 @@ if (!$conn) {
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contacto.php">Contactos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carrito.php">MyIOT Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="social/social.php">MyIOT Social</a>
           </li>
         </ul>
         <ul class="navbar-nav">
