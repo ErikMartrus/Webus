@@ -45,9 +45,6 @@
             <a class="nav-link" href="../contacto.php">Contactos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../productos.php">Productos</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="../carrito.php">MyIOT Shop</a>
           </li>
           <li class="nav-item">

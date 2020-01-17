@@ -37,6 +37,12 @@
       </button>
       <?php
       if(!isset($_SESSION["user"])){
+        echo '<script>
+        alert("Solo puede acceder a esta página si estas logueado");
+        window.history.go(-1);
+        </script>';
+        exit;
+
       ?>
       <div class="collapse navbar-collapse" id="navbarSupportedContent"
         style="display: flex; justify-content:space-between">
