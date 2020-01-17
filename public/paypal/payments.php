@@ -1,9 +1,11 @@
 <?php
 session_start();
 if (!isset($_SESSION["user"])) {
-    header('Location: ../carrito.php');
-    $_SESSION["errorLogeadoTienda"] = 1;
-    exit;
+    echo '<script>
+        alert("Es necesario que este logeado para poder realizar la compra");
+        window.history.go(-1);
+        </script>';
+        exit;
 }
 // DESPUÉS COMPROBAMOS QUE EL CARRITO NO ESTÉ VACÍO
 if (!isset($_SESSION["carrito"])) {
