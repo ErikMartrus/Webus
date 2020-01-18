@@ -4,6 +4,9 @@ $nombrePerfil = "nombreUsuario";
 $informacionPerfil = "informacionUsuario";
 $foto =  "foto";
 
+
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (
         isset($_POST[$nombrePerfil]) && isset($_POST[$informacionPerfil])

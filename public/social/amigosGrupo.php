@@ -23,7 +23,7 @@ $idUsuario = "";
 
 // Mostramos los usuarios que siguen al usuario
 
-echo "<h4> Usuarios que sigo </h4>";
+echo "<h4> Grupo formados </h4>";
 
 $sqlUsuariosSeguidos = "SELECT * FROM amigos WHERE id_usuario = '$idUsuarioLogeado'";
 
@@ -40,12 +40,17 @@ if ($result = mysqli_query($connection, $sqlUsuariosSeguidos)) {
                 $idAmigo = $row2['id'];
 
             $sqlUsuarioGrupo = "INSERT INTO grupos(id_miembros) VALUES ('$idAmigo')";
-            echo "<p>
-                <h3>El grupo esta formado por : </h3> 
-                <b> $nombreUsuarioLogeado</b> 
-                <b> $nombreUsuario</b>
-                </p>";  
+            if ($result = mysqli_query($connection, $sqlUsuarioGrupo)) {
+                if ($row = mysqli_fetch_assoc($result)) {
+                    echo "<p>
+                        <h3>El grupo esta formado por : </h3> 
+                        <b> $nombreUsuarioLogeado</b> 
+                        <b> $nombreUsuario</b>
+                        </p>";  
+                }
             }
+        }
+
         }
     }
 }
