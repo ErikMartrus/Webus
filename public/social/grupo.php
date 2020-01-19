@@ -171,9 +171,34 @@ if (!$conn) {
             <h1>Mi Grupo</h1>
           </hgroup>
         </header>
-        <?php include('amigosGrupo.php');?>
+        <?php include('mostrarGrupo.php');?>
         </header>
       </article>
+      <article class="articulo">
+        <header>
+          <div>
+          <header>
+                <h1>Crear Grupo: </h1>
+          </header>
+            <form  action="grupo.php" method="POST">
+              <div class="contenedor--form">
+                <div class="items--form">
+                  <label for="name">nombre del Grupo : <span class="required">*</span></label>
+                    <input type="text" id="nombreGrupo" name="nombreGrupo" value="" placeholder="Nombre del grupo" required autofocus />
+                </div>
+              <div class="items--form">            
+                  <select name="miembrosGrupo" required>
+                                <option value="" disabled selected>--Seleccionar--</option>
+                                <?php include('./UsuarioMensaje.php');?>
+                            </select>
+                </div>
+                <div class="enter items--form">
+                  <button type="submit" class="btn btn--iot btn--addProducto">Añadir a Grupo</button>
+                  </div>
+              </div>
+            </form>
+          </header>
+        </article>
     </section>
 
 </div>
