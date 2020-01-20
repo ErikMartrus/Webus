@@ -200,7 +200,14 @@ if (!$conn) {
           </header>
         </article>
     </section>
+    
+    <aside id="lateral">
+      <div id="info">
+        <p class="infoLateralPost1">Enviar Mensaje a Grupo : </p>
+        <a href="mensajesGrupo.php"><button class='btn btn--iot' type='submit'><img src='../assets/img/mensaje.png' alt='Mensaje a Grupo' width='50' height='50' />Enviar Mensaje</button></a>
 
+      </div>
+    </aside>
 </div>
   <!-- 10% -->
   <footer id="piePaginaCarrito">
