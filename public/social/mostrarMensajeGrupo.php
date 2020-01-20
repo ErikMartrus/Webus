@@ -16,7 +16,7 @@ if (mysqli_connect_errno()) {
 if(isset($_SESSION["user"])){
 $idUsuarioLogeado = $_SESSION["user"]["id"];
 
-$sqlUsuarioLogeado = "SELECT * FROM grupos WHERE id_usuario = '$idUsuarioLogeado'";
+$sqlUsuarioLogeado = "SELECT * FROM grupos WHERE id_admin = '$idUsuarioLogeado'";
 
 $nombreEmisor = "";
 
@@ -28,7 +28,7 @@ if ($result1 = mysqli_query($connection, $sqlUsuarioLogeado)) {
 }
 
 
-// MENSAJES ENVIADOS
+
 
 $sqlMensajes = "SELECT * FROM mensajesgrupos WHERE id_grupos = '$idGrupo'";
 
@@ -37,9 +37,8 @@ echo "<h3> Mensajes enviados al Grupo </h3>";
 if ($result = mysqli_query($connection, $sqlMensajes)) {
     while ($row = mysqli_fetch_array($result)) {
         $senderID = $row['sender'];
-        $privado = $row['privado'];
         $fechaMensaje = $row['fecha'];
-        $mensaje = $row['message'];
+        $mensaje = $row['mensaje'];
 
         $sqlUser = "SELECT * FROM users WHERE id='$senderID'";
 
@@ -53,9 +52,6 @@ if ($result = mysqli_query($connection, $sqlMensajes)) {
                 <b>Emisor:</b> $nombreEmisor.
                 <b>Fecha:</b> $fechaMensaje.";
 
-                if ($privado == 1) {
-                    echo "<b> Privado </b>";
-                }
 
                 echo "</p>";
             }
@@ -66,6 +62,5 @@ if ($result = mysqli_query($connection, $sqlMensajes)) {
 
 
 mysqli_close($connection);
-}else{
-    echo "Ha de estar logueado primero";
+
 }

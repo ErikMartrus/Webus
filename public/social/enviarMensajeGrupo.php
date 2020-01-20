@@ -4,7 +4,6 @@ session_start();
 
 $destinatarioIDInput = "destinatarioGrupo";
 $messageIDInput = "mensaje";
-$privadoIDInput = "privado";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,20 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = $_POST[$messageIDInput];
         $fechaMensaje = date("Y-m-d H:i:s", $_SERVER["REQUEST_TIME"]);
 
-        // Privado marcado
-        if (isset($_POST[$privadoIDInput])) {
-            $privado = 1;
-        }
-
-        // Privado NO marcado
-        else {
-            $privado = 0;
-        }
+        
 
         echo "Emisor: $emisor <br>";
         echo "Mensaje enviado a Grupo: $destinatario <br>";
         echo "Mensaje: $message <br>";
-        echo "Privado: $privado <br>";
         echo "Fecha mensaje: $fechaMensaje <br>";
 
         // Guardar mensaje en la base de datos
@@ -52,12 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // 4. Checking if the table is created
 
-        $sql = "INSERT INTO mensajesgrupos (id_grupos, sender, fecha, privado, mensaje)
-                VALUES ('$destinatario', '$emisor', '$fechaMensaje', '$privado', '$message')";
+        $sql = "INSERT INTO mensajesgrupos (id_grupos, sender, fecha, mensaje)
+                VALUES ('$destinatario', '$emisor', '$fechaMensaje', '$message')";
 
         if (mysqli_query($connection, $sql)) {
             echo "New record created successfully";
-            header('Location: ../mensajes.php');
+            header('Location: grupo.php');
             exit;
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($connection);

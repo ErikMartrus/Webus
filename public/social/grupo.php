@@ -180,7 +180,7 @@ if (!$conn) {
           <header>
                 <h1>Crear Grupo: </h1>
           </header>
-            <form  action="grupo.php" method="POST">
+            <form  action="amigosGrupo.php" method="POST">
               <div class="contenedor--form">
                 <div class="items--form">
                   <label for="name">nombre del Grupo : <span class="required">*</span></label>
@@ -190,7 +190,8 @@ if (!$conn) {
                   <select name="miembrosGrupo" required>
                                 <option value="" disabled selected>--Seleccionar--</option>
                                 <?php include('./UsuarioMensaje.php');?>
-                            </select>
+                  </select>
+                  <?php ?>
                 </div>
                 <div class="enter items--form">
                   <button type="submit" class="btn btn--iot btn--addProducto">Añadir a Grupo</button>

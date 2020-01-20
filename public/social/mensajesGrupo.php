@@ -176,10 +176,6 @@
                                 <?php include('GrupoMensaje.php');?>
                             </select>
                             <textarea style="margin-top: 10px;" name="mensaje" required></textarea>
-                            <div class="form-check" style="margin-top: 10px;">
-                                <input class="form-check-input" type="checkbox" id="formCheck-1" name="privado">
-                                <label class="form-check-label" for="formCheck-1">Privado</label>
-                            </div>
                             <button class="btn btn-primary" type="submit" style="margin-top: 10px;margin-bottom: 10px;">ENVIAR</button>
                         </form>
                     </article>
