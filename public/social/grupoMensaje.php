@@ -20,20 +20,17 @@ $sqlAmigos = "SELECT * FROM grupos";
 
 if ($result2 = mysqli_query($connection, $sqlAmigos)) {
     while ($row2 = mysqli_fetch_array($result2)) {
+        
+        $idPersona = $row2['id_usuario'];
+        $nombreGrupo=  $row2['nombre_grupo'];
+        
+        $idGrupo=  $row2['id'];
+       
 
-        $idPersona = $row2['id_miembros'];
-
-        $sqlNombreAmigo = "SELECT * FROM users WHERE id = $idPersona";
-
-        if ($result4 = mysqli_query($connection, $sqlNombreAmigo)) {
-            while ($row4 = mysqli_fetch_array($result4)) {
-                $nombreMiembroGrupo = $row4['nombre'];
-                $idPersona = $row4['id'];
-
-                echo "<option value='$idPersona|$idPersona'>Grupo de: $nombreUsuarioLider</option>";
+                echo "<option value='$idGrupo'>Grupo: $nombreGrupo</option>";
             }
         }
-    }
-}
+    
+
 
 mysqli_close($connection);

@@ -20,7 +20,7 @@
   <meta charset="utf-8">
   <meta name="description" content="This is an HTML5/CSS3 example">
   <meta name="keywords" content="HTML5, CSS3, JavaScript">
-  <title>Ayuda</title>
+  <title>Mensajes Grupo</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/misEstilos.css">
@@ -170,8 +170,8 @@
                     <article class="text-center article1_shop">
                         <h1 class="text-center" id="card_header">Enviar mensaje</h1>
                         <form method="POST" action="enviarMensajeGrupo.php">
-                            Destinatario: 
-                            <select name="destinatario" id="destinatario" required>
+                            Grupos : 
+                            <select name="destinatarioGrupo" id="destinatarioGrupo" required>
                                 <option value="" disabled selected>--Seleccionar--</option>
                                 <?php include('GrupoMensaje.php');?>
                             </select>
@@ -187,7 +187,7 @@
                 <div class="col">
                     <article class="article1_shop">
                         <h1 class="text-center" id="card_header">Mensajes</h1>
-                        <?php include('mostrarMensaje.php');?>
+                        <?php include('mostrarMensajeGrupo.php');?>
                     </article>
                 </div>
             </div>
