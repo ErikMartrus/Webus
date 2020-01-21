@@ -186,6 +186,10 @@ if (!$conn) {
         <label for="name">Url de la  imagen: <span class="required">*</span></label>
         <input type="url" name="url" value="" placeholder="url de la imagen">
       </div>
+      <div class="items--form">
+        <label for="name">Categoría: <span class="required">*</span></label>
+        <input type="text" id="categoria" name="categoria" value="" placeholder="Categoria del producto" required autofocus />
+      </div>
       <div class="enter items--form">
           <a href="misCanales.php"><button type="submit" class="btn btn--iot btn--addProducto">Añadir producto</button></a>
       </div>
