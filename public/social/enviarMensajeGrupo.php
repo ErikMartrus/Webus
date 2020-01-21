@@ -2,9 +2,12 @@
 
 session_start();
 
+include('functions.php');
+
 $destinatarioIDInput = "destinatarioGrupo";
 $messageIDInput = "mensaje";
 
+consoleLog("esto está vacio: ".$_POST['destinatarioGrupo']);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (

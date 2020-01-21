@@ -169,15 +169,19 @@
                 <div class="col-4 text-left">
                     <article class="text-center article1_shop">
                         <h1 class="text-center" id="card_header">Enviar mensaje</h1>
+
+
                         <form method="POST" action="enviarMensajeGrupo.php">
                             Grupos : 
                             <select name="destinatarioGrupo" id="destinatarioGrupo" required>
                                 <option value="" disabled selected>--Seleccionar--</option>
-                                <?php include('GrupoMensaje.php');?>
+                                <?php include('./grupoMensaje.php');?>
                             </select>
                             <textarea style="margin-top: 10px;" name="mensaje" required></textarea>
                             <button class="btn btn-primary" type="submit" style="margin-top: 10px;margin-bottom: 10px;">ENVIAR</button>
                         </form>
+
+
                     </article>
                 </div>
                 <div class="col">

@@ -14,7 +14,7 @@ if (mysqli_connect_error()) {
 
 $idUsuario=$_SESSION["user"]["id"];
 
-$sqlAmigos = "SELECT nombre_grupo FROM grupos WHERE id_admin='$idUsuario'";
+$sqlAmigos = "SELECT * FROM grupos WHERE id_admin='$idUsuario'";
 $result2 = mysqli_query($connection, $sqlAmigos);
 if ($result2) {
     while ($row2 = mysqli_fetch_array($result2)) {
