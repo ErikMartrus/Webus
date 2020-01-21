@@ -87,4 +87,8 @@ function createGroupAndAddUser($nombreGrupo, $userID) {
     VALUES ('$nombreGrupo','$userID','$currentUser')";
     $resultado = queryMysql($sqlCreateGroup);
 }
+
+function consoleLog($value) {
+    echo "<script>console.log('$value')</script>";
+}
 ?>
